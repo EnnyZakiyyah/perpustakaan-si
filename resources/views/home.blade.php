@@ -3,13 +3,15 @@
 @section('container')
       <!-- ============================================-->
       <!-- HEADER ============================-->
-      <section class="pt-5">
+      <section class="pt-3">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col-md-6 text-md-start text-center py-6">
+            <div class="col-md-6 text-sm-start text-center py-6">
               <h1 class="mb-4 fs-9 fw-bold">Selamat Datang di Perpustakaan LPTP Surakarta</h1>
               <p class="mb-5 lead text-secondary">Tools tutorials, design and innovation experts, all<br class="d-none d-xl-block" />in one place! The most intuitive way to imagine<br class="d-none d-xl-block" />your next user experience.</p>
-              <div class="text-center text-md-start"> <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></div>
+              <form>
+                <div class="search rounded-pill w-xl-75 w-xxl-50 d-flex flex-end-center"><input type="text" class="form-control rounded-pill" placeholder="Search books, articles, keywords"> <i class="fa fa-search"></i></div>
+              </form>
             </div>
             <div class="col-md-6 text-end"><img class="pt-7 pt-md-0 img-fluid" src="assets/img/hero/hero-img.png" alt="" /></div>
           </div>
