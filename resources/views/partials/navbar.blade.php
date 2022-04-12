@@ -3,7 +3,7 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
       <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" aria-current="page" href="#feature">Home</a></li>
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="/sirkulasi" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Sirkulasi
