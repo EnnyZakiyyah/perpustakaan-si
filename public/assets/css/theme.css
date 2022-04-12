@@ -4439,14 +4439,14 @@ fieldset:disabled .btn {
 
 .nav-tabs .nav-link {
   margin-bottom: -1px;
-  background: none;
+  background-color: transparent;
   border: 1px solid transparent;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
 
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  border-color:  #F5F5F5 #EEEEEE;
+  /* border-color:  #F5F5F5 #EEEEEE; */
   isolation: isolate;
 }
 
@@ -4458,9 +4458,13 @@ fieldset:disabled .btn {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #DF6951;
-  background-color: rgba(223, 105, 81, 0.15);
-  border-color: transparent;
+  color: #002147;
+  background-color: transparent;
+  font-size : 24px;
+  font-weight : 500;
+  font-family: Poppins;
+  /* border-bottom : 1px solid #ffffff; */
+  /* border-color: 1px solid #EEEEEE; */
 }
 
 .nav-tabs .dropdown-menu {
@@ -4505,11 +4509,22 @@ fieldset:disabled .btn {
 }
 
 .tab-content > .tab-pane {
-  display: none;
+  /* display : none; */
+  
+  position: relative;
+  z-index: 2;
+  padding: 25px;
+  background: white;
 }
 
 .tab-content > .active {
-  display: block;
+  border-top: 1px solid #ffffff !important;
+  position: relative;
+  z-index: 2;
+  padding: 25px;
+  /* border-radius: 4px 4px 4px 4px; */
+  background: white;
+  border:1px solid #EEEEEE;  
 }
 
 .navbar {
@@ -17646,6 +17661,7 @@ iframe {
   background-color: #79B93C;
   border-color: #79B93C;
 }
+
 
 /* @media (min-width: 768px) { */
   /* show 3 items */
