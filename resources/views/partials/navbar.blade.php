@@ -9,19 +9,19 @@
               Sirkulasi
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Peminjaman Buku</a></li>
-              <li><a class="dropdown-item" href="#">Pengembalian Buku</a></li>
-              <li><a class="dropdown-item" href="#">Penelusuran Katalog</a></li>
-              <li><a class="dropdown-item" href="#">Bebas Pustaka</a></li>
+              <li><a class="dropdown-item" href="/home/sirkulasi/peminjaman-buku">Peminjaman Buku</a></li>
+              <li><a class="dropdown-item" href="/home/sirkulasi/pengembalian-buku">Pengembalian Buku</a></li>
+              <li><a class="dropdown-item" href="/home/sirkulasi/penelusuran-katalog">Penelusuran Katalog</a></li>
+              <li><a class="dropdown-item" href="/home/sirkulasi/bebas-pustaka">Bebas Pustaka</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="/sirkulasi" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="/layanan" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Layanan
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Keanggotaan</a></li>
-              <li><a class="dropdown-item" href="#">Bibliography</a></li>
+              <li><a class="dropdown-item" href="/home/layanan/keanggotaan">Keanggotaan</a></li>
+              <li><a class="dropdown-item" href="/home/layanan/bibliography">Bibliography</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -29,12 +29,12 @@
               Koleksi Digital
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Buku</a></li>
-              <li><a class="dropdown-item" href="#">Majalah</a></li>
-              <li><a class="dropdown-item" href="#">Booklet</a></li>
-              <li><a class="dropdown-item" href="#">Laporan TA</a></li>
-              <li><a class="dropdown-item" href="#">Laporan Program</a></li>
-              <li><a class="dropdown-item" href="#">Memori Card</a></li>
+              <li><a class="dropdown-item" href="/home/koleksi-digital/buku">Buku</a></li>
+              <li><a class="dropdown-item" href="/home/koleksi-digital/majalah">Majalah</a></li>
+              <li><a class="dropdown-item" href="/home/koleksi-digital/booklet">Booklet</a></li>
+              <li><a class="dropdown-item" href="/home/koleksi-digital/laporan-ta">Laporan TA</a></li>
+              <li><a class="dropdown-item" href="/home/koleksi-digital/laporan-program">Laporan Program</a></li>
+              <li><a class="dropdown-item" href="/home/koleksi-digital/softfile">Softfile</a></li>
             </ul>
           </li>
         </ul>

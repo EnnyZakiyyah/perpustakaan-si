@@ -116,7 +116,7 @@
                 </div>
               </div>  
             </section>
-
+            <br/>
             {{-- <section class="py-0 mt-3" style="margin-top:-5.8rem">
     
               <div class="container">
@@ -174,39 +174,34 @@
 
 
       <!-- ============================================-->
-      <!-- <ABOUT ME> begin ============================-->
-        <section class="mt-5" id="about-me">
+      <!-- <TENTANG KAMI> begin ============================-->
+        <section class="mt-5 pt-5" id="about-me">
 
           <div class="bg-holder z-index--1 bottom-0 d-none d-lg-block" style="background-image:url({{asset('assets/img/category/shape.png')}});opacity:.5;">
           </div>
           <!--/.bg-holder-->
 
+          
           <div class="container">
             <div class="row">
-              <div class="col-lg-6"><img class="img-fluid" src="{{asset('assets/img/marketer/marketer.png')}}" alt="" /></div>
               <div class="col-lg-6">
-                <p class="fs-7 fw-bold mb-2"> <span style="color: #002147"> Tentang </span> <span style="color : #FF9900"> Kami</span></p>
+                <h2 class="mb-2 fs-7 fw-bold"><span style="color: #002147"> Tentang </span><span style="color : #FF9900">Kami</span></h2>
                 <p class="mb-4 fw-medium text-secondary">
-                  The Myspace page defines the individual,his or her
-                  characteristics, traits, personal choices and the overall<br />personality of the person.
+                  Perpustakaan  lptp merupakan unit kerja dari Yayasan LPTP. Perpustakaan LPTP menyediakan berbagai sumber informasi dan referensi bagi para staf dan komunitas LPTP. Perpustakaan ini diharapakan menjadi rumah belajar bagi seluruh staf dan komunitas yang ingin meningkatkan literasinya. Meningkatnya literasi akan mendukung lancarnya tugas kerja semua staf dan mitranya di berbagai tempat.
                 </p>
-                <div class="d-flex align-items-center mb-3"> <img class="me-sm-4 me-2" src="{{asset('assets/img/manager/tick.png')}}" width="35" alt="tick" />
-                  <p class="fw-medium mb-0 text-secondary">Never worry about overpaying for your<br />energy again.</p>
-                </div>
-                <div class="d-flex align-items-center mb-3"> <img class="me-sm-4 me-2" src="{{asset('assets/img/manager/tick.png')}}" width="35" alt="tick" />
-                  <p class="fw-medium mb-0 text-secondary">We will only switch you to energy companies<br />that we trust and will treat you right</p>
-                </div>
-                <div class="d-flex align-items-center mb-3"><img class="me-sm-4 me-2" src="{{asset('assets/img/manager/tick.png')}}" width="35" alt="tick" />
-                  <p class="fw-medium mb-0 text-secondary"> We track the markets daily and know where the<br />savings are.</p>
-                </div>
+                <p class="mb-4 fw-medium text-secondary">
+                  Berbagai sarana literasi tersedia di perpustakaan LPTP dan secara bertahap terus ditingkatkan. Koleksi perpustakaan non digital maupun digital terus diupayakan penambahannya untuk memenuhi kebutuhan staf dan komunitas dari tahun ke tahun.
+                </p>
+                <h4 class="fs-1 fw-bold">Jam Buka</h4>
+                <p class="mb-4 fw-medium text-secondary">08.00 – 16.00 </p>
+                <h4 class="fs-1 fw-bold">Alamat</h4>
+                <p class="mb-4 fw-medium text-secondary">Jl. Raya Palur Km 5 Tegal Asri RT 04/VI Ngringo<br />Jaten - Karanganyar 57772 Jawa Tengah<br/>Phone (0271) 826620, Fax (0271) 825107</p>
               </div>
+              <div class="col-lg-6"><img class="img-fluid" src="assets/img/validation/validation.png" alt="" /></div>
             </div>
           </div><!-- end of .container-->
   
         </section>
-        <!-- <TENTANG KAMI> close ============================-->
-        <!-- ============================================-->
-
 
       <!-- ============================================-->
       <!-- <LAYANAN KAMI> begin ============================-->
@@ -251,28 +246,45 @@
 
       <!-- ============================================-->
       <!-- <TATA TERTIB> begin ============================-->
-      <section class="pt-2" id="tata-tertib">
+        <section class="pt-0" id="tata-tertib">
 
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6">
-              <h2 class="mb-2 fs-7 fw-bold"><span style="color: #002147"> Tata </span><span style="color : #FF9900">Tertib</span></h2>
-              <p class="mb-4 fw-medium text-secondary">
-                The Myspace page defines the individual,his or her
-                characteristics, traits, personal choices and the overall<br />personality of the person.
-              </p>
-              <h4 class="fs-1 fw-bold">Accessory makers</h4>
-              <p class="mb-4 fw-medium text-secondary">While most people enjoy casino gambling, sports betting,<br />lottery and bingo playing for the fun</p>
-              <h4 class="fs-1 fw-bold">Alterationists</h4>
-              <p class="mb-4 fw-medium text-secondary">If you are looking for a new way to promote your business<br />that won't cost you money,</p>
-              <h4 class="fs-1 fw-bold">Custom Design designers</h4>
-              <p class="mb-4 fw-medium text-secondary">If you are looking for a new way to promote your business<br />that won't cost you more money,</p>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6"><img class="img-fluid" src="{{asset('assets/img/marketer/marketer.png')}}" alt="" /></div>
+              <div class="col-lg-6">
+                <p class="fs-7 fw-bold mb-2"> <span style="color: #002147"> Tata <span style="color : #FF9900"> Tertib</span></p>
+                <p class="mb-4 fw-medium text-secondary">
+                  Tata Tertib Perpustakaan LPTP :
+                </p>
+                <div class="d-flex align-items-center mb-3"> <img class="me-sm-4 me-2" src="{{asset('assets/img/manager/tick.png')}}" width="35" alt="tick" />
+                  <p class="fw-medium mb-0 text-secondary">Tas harus ditaruh di luar ruang perpustakaan.</p>
+                </div>
+                <div class="d-flex align-items-center mb-3"> <img class="me-sm-4 me-2" src="{{asset('assets/img/manager/tick.png')}}" width="35" alt="tick" />
+                  <p class="fw-medium mb-0 text-secondary">Masuk ruang perpustakaan hanya untuk membaca dan meminjam buku. Di larang melakukan hal lain selain itu.</p>
+                </div>
+                <div class="d-flex align-items-center mb-3"><img class="me-sm-4 me-2" src="{{asset('assets/img/manager/tick.png')}}" width="35" alt="tick" />
+                  <p class="fw-medium mb-0 text-secondary"> Yang berhak meminjam buku adalah pemegang kartu anggota perpustakaan LPTP.</p>
+                </div>
+                <div class="d-flex align-items-center mb-3"><img class="me-sm-4 me-2" src="{{asset('assets/img/manager/tick.png')}}" width="35" alt="tick" />
+                  <p class="fw-medium mb-0 text-secondary"> Peminjaman buku paling banyak dua buku dan waktunya satu minggu. Kelambatan pengembalian akan dikenai denda.</p>
+                </div>
+                <div class="d-flex align-items-center mb-3"><img class="me-sm-4 me-2" src="{{asset('assets/img/manager/tick.png')}}" width="35" alt="tick" />
+                  <p class="fw-medium mb-0 text-secondary"> Buku perpustakaan dilarang di bawa keluar ruangan kecuali  dipinjam atau dengan izin.</p>
+                </div>
+                <div class="d-flex align-items-center mb-3"><img class="me-sm-4 me-2" src="{{asset('assets/img/manager/tick.png')}}" width="35" alt="tick" />
+                  <p class="fw-medium mb-0 text-secondary"> Peminjaman buku dilakukan jam 08.00 sampai jam 16.00.</p>
+                </div>
+                <div class="d-flex align-items-center mb-3"><img class="me-sm-4 me-2" src="{{asset('assets/img/manager/tick.png')}}" width="35" alt="tick" />
+                  <p class="fw-medium mb-0 text-secondary"> Harus tenang dan tertib selama di ruang perpustakaan. Dilarang membuat gaduh di ruang perpustakaan.</p>
+                </div>
+                <div class="d-flex align-items-center mb-3"><img class="me-sm-4 me-2" src="{{asset('assets/img/manager/tick.png')}}" width="35" alt="tick" />
+                  <p class="fw-medium mb-0 text-secondary"> Mahasiswa dilarang merokok di ruang perpustakaan.</p>
+                </div>
+              </div>
             </div>
-            <div class="col-lg-6"><img class="img-fluid" src="assets/img/validation/validation.png" alt="" /></div>
-          </div>
-        </div><!-- end of .container-->
-
-      </section>
+          </div><!-- end of .container-->
+  
+        </section>
       <!-- <TATA TERTIB> close ============================-->
       <!-- ============================================-->
 

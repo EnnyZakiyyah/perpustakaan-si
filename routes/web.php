@@ -14,21 +14,52 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('home.home');
 });
 
-Route::get('/sirkulasi', function () {
-    return view('sirkulasi');
+//Home-Sirkulasi 
+Route::get('/home/sirkulasi/peminjaman-buku', function () {
+    return view('home.sirkulasi.peminjaman-buku');
+});
+Route::get('/home/sirkulasi/pengembalian-buku', function () {
+    return view('home.sirkulasi.pengembalian-buku');
+});
+Route::get('/home/sirkulasi/penelusuran-katalog', function () {
+    return view('home.sirkulasi.penelusuran-katalog');
+});
+Route::get('/home/sirkulasi/bebas-pustaka', function () {
+    return view('home.sirkulasi.bebas-pustaka');
 });
 
-Route::get('/layanan', function () {
-    return view('layanan');
+//Home-Layanan
+Route::get('/home/layanan/keanggotaan', function () {
+    return view('home.layanan.keanggotaan');
+});
+Route::get('/home/layanan/bibliography', function () {
+    return view('home.layanan.bibliography');
 });
 
-Route::get('/koleksi-digital', function () {
-    return view('koleksi-digital');
+//Home-Koleksi-Digital
+Route::get('/home/koleksi-digital/booklet', function () {
+    return view('home.koleksi-digital.booklet');
+});
+Route::get('/home/koleksi-digital/buku', function () {
+    return view('home.koleksi-digital.buku');
+});
+Route::get('/home/koleksi-digital/laporan-program', function () {
+    return view('home.koleksi-digital.laporan-program');
+});
+Route::get('/home/koleksi-digital/laporan-ta', function () {
+    return view('home.koleksi-digital.laporan-ta');
+});
+Route::get('/home/koleksi-digital/majalah', function () {
+    return view('home.koleksi-digital.majalah');
+});
+Route::get('/home/koleksi-digital/softfile', function () {
+    return view('home.koleksi-digital.softfile');
 });
 
+//Auth
 Route::get('/sign-in', function () {
     return view('sign-in');
 });

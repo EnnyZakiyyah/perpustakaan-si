@@ -4197,7 +4197,7 @@ fieldset:disabled .btn {
 .dropdown-item:hover, .dropdown-item:focus {
   color: #4c4132;
   text-decoration: none;
-  background-color: #F5F5F5;
+  background-color: #FFC84D;
 }
 
 .dropdown-item.active, .dropdown-item:active {
@@ -4252,7 +4252,7 @@ fieldset:disabled .btn {
 }
 
 .dropdown-menu-dark .dropdown-item.disabled, .dropdown-menu-dark .dropdown-item:disabled {
-  color: #BDBDBD;
+  color: #FFC84D;
 }
 
 .dropdown-menu-dark .dropdown-divider {
@@ -4446,7 +4446,7 @@ fieldset:disabled .btn {
 }
 
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  border-color: #F5F5F5 #F5F5F5 #EEEEEE;
+  border-color:  #F5F5F5 #EEEEEE;
   isolation: isolate;
 }
 
