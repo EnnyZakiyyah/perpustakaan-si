@@ -5296,8 +5296,8 @@ fieldset:disabled .btn {
 .badge {
   display: inline-block;
   padding: 0.35em 0.65em;
-  font-size: 0.75em;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 300;
   line-height: 1;
   color: #FFFEFE;
   text-align: center;
@@ -9499,7 +9499,7 @@ fieldset:disabled .btn {
 }
 
 .bg-primary {
-  background-color: #747DEF !important;
+  background-color: #214DA6 !important;
 }
 
 .bg-secondary {
@@ -17691,7 +17691,6 @@ iframe {
   background-color: #79B93C;
   border-color: #79B93C;
 }
-
 
 /* @media (min-width: 768px) { */
   /* show 3 items */

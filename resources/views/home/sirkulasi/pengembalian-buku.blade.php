@@ -43,24 +43,117 @@
   <section class="pt-2">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><span style="color: #002147"> Koleksi </span><span style="color : #FF9900">Dipinjam</span></button>
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><span style="color: #002147"> Koleksi </span><span style="color : #FF9900">Peminjaman</span></button>
           </li>
         </ul>
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            
-            <div class="container">
-                <div class="row">
-                  <div class="col">
-                    Column
+            <div class="container pt-1 pb-5">
+                <div class="row pt-5 pb-5">
+                  <div class="col-4">
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <img class="card-img-top" src="{{asset('assets/img/sirkulasi/lord-rings-2.png')}}" alt="" />
+                        </div>
+                        <div class="col-4 pt-5 pb-5">
+                            <p><span class="badge rounded-pill bg-primary pt-1">Sudah Kembali</span></p>                            
+                            <p><span class="badge rounded-pill bg-warning">Buku Hilang</span></p>
+                        </div>
+                    </div>
                   </div>
-                  <div class="col">
-                    Column
+                  <div class="col-4">
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <img class="card-img-top" src="{{asset('assets/img/sirkulasi/lord-rings-2.png')}}" alt="" />
+                        </div>
+                        <div class="col-4 pt-5 pb-5">
+                            <p><span class="badge rounded-pill bg-primary pt-1">Sudah Kembali</span></p>                            
+                            <p><span class="badge rounded-pill bg-success">Tepat Waktu</span></p>
+                        </div>
+                    </div>
                   </div>
-                  <div class="col">
-                    Column
+                  <div class="col-4">
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <img class="card-img-top" src="{{asset('assets/img/sirkulasi/lord-rings-2.png')}}" alt="" />
+                        </div>
+                        <div class="col-4 pt-5 pb-5">
+                            <p><span class="badge rounded-pill bg-primary pt-1">Sudah Kembali</span></p>                            
+                            <p><span class="badge rounded-pill bg-warning">Buku Hilang</span></p>
+                        </div>
+                    </div>
                   </div>
                 </div>
+                <div class="row pt-5 pb-5">
+                    <div class="col-4">
+                      <div class="row justify-content-center">
+                          <div class="col-4">
+                              <img class="card-img-top" src="{{asset('assets/img/sirkulasi/lord-rings-2.png')}}" alt="" />
+                          </div>
+                          <div class="col-4 pt-5 pb-5">
+                              <p><span class="badge rounded-pill bg-primary pt-1">Sudah Kembali</span></p>                            
+                              <p><span class="badge rounded-pill bg-danger">Terlambat</span></p>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="row justify-content-center">
+                          <div class="col-4">
+                              <img class="card-img-top" src="{{asset('assets/img/sirkulasi/lord-rings-2.png')}}" alt="" />
+                          </div>
+                          <div class="col-4 pt-5 pb-5">
+                              <p><span class="badge rounded-pill bg-primary pt-1">Sudah Kembali</span></p>                            
+                              <p><span class="badge rounded-pill bg-success">Tepat Waktu</span></p>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="row justify-content-center">
+                          <div class="col-4">
+                              <img class="card-img-top" src="{{asset('assets/img/sirkulasi/lord-rings-2.png')}}" alt="" />
+                          </div>
+                          <div class="col-4 pt-5 pb-5">
+                              <p><span class="badge rounded-pill bg-primary pt-1">Sudah Kembali</span></p>                            
+                              <p><span class="badge rounded-pill bg-danger">Terlambat</span></p>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row pt-5">
+                    <div class="col-4">
+                      <div class="row justify-content-center">
+                          <div class="col-4">
+                              <img class="card-img-top" src="{{asset('assets/img/sirkulasi/lord-rings-2.png')}}" alt="" />
+                          </div>
+                          <div class="col-4 pt-5 pb-5">
+                              <p><span class="badge rounded-pill bg-primary pt-1">Sudah Kembali</span></p>                            
+                              <p><span class="badge rounded-pill bg-warning">Buku Hilang</span></p>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="row justify-content-center">
+                          <div class="col-4">
+                              <img class="card-img-top" src="{{asset('assets/img/sirkulasi/lord-rings-2.png')}}" alt="" />
+                          </div>
+                          <div class="col-4 pt-5 pb-5">
+                              <p><span class="badge rounded-pill bg-primary pt-1">Sudah Kembali</span></p>                            
+                              <p><span class="badge rounded-pill bg-danger">Terlambat</span></p>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="row justify-content-center">
+                          <div class="col-4">
+                              <img class="card-img-top" src="{{asset('assets/img/sirkulasi/lord-rings-2.png')}}" alt="" />
+                          </div>
+                          <div class="col-4 pt-5 pb-5">
+                              <p><span class="badge rounded-pill bg-primary pt-1">Sudah Kembali</span></p>                            
+                              <p><span class="badge rounded-pill bg-warning">Buku Hilang</span></p>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
             </div>
 
             <!--PAGINATION-->
