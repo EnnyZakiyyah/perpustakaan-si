@@ -39,7 +39,7 @@
   </section>
 
 
-    <!--Koleksi-Dipinjam-->
+    <!--Pengembalian-Buku-->
   <section class="pt-2">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
@@ -188,84 +188,84 @@
           <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <div class="row">
+                <div class="row h-100 align-items-center">
                   <div class="col-md-4 mb-4">
-                    <div class="card"><img class="card-img-top" src="{{asset('assets/img/marketing/marketing01.png')}}" alt="" />
-                      <div class="card-body ps-0">
+                    <div class="card-book card-span text-white h-100" style="background-color:#E5E5E5"><center><img class="img-thumbnail" src="{{ asset('assets/img/sirkulasi/lord-rings-2.png') }}" alt="..." /></center>
+                      <div class="card-book-body ps-0" style="background-color:#ffffff">
                         <p class="text-secondary">By <a class="fw-bold text-decoration-none me-1" href="#">Abdullah</a>|<span class="ms-1">03 March 2019</span></p>
                         <h3 class="fw-bold">Increasing Prosperity With Positive Thinking</h3>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-4 mb-4">
-                    <div class="card"><img class="card-img-top" src="{{asset('assets/img/marketing/marketing02.png')}}" alt="" />
-                      <div class="card-body ps-0">
+                    <div class="card-book card-span text-white h-100" style="background-color:#E5E5E5"><center><img class="img-thumbnail" src="{{ asset('assets/img/sirkulasi/lord-rings-2.png') }}" alt="..." /></center>
+                      <div class="card-book-body ps-0" style="background-color:#ffffff">
                         <p class="text-secondary">By <a class="fw-bold text-decoration-none me-1" href="#">Abdullah</a>|<span class="ms-1">03 March 2019</span></p>
-                        <h3 class="fw-bold">Motivation Is The First Step To Success</h3>
+                        <h3 class="fw-bold">Increasing Prosperity With Positive Thinking</h3>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-4 mb-4">
-                    <div class="card"><img class="card-img-top" src="{{asset('assets/img/marketing/marketing03.png')}}" alt="" />
-                      <div class="card-body ps-0">
+                    <div class="card-book card-span text-white h-100" style="background-color:#E5E5E5"><center><img class="img-thumbnail" src="{{ asset('assets/img/sirkulasi/lord-rings-2.png') }}" alt="..." /></center>
+                      <div class="card-book-body ps-0" style="background-color:#ffffff">
                         <p class="text-secondary">By <a class="fw-bold text-decoration-none me-1" href="#">Abdullah</a>|<span class="ms-1">03 March 2019</span></p>
-                        <h3 class="fw-bold">Success Steps For Your Personal Or Business Life</h3>
+                        <h3 class="fw-bold">Increasing Prosperity With Positive Thinking</h3>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="row">
+                <div class="row h-100 align-items-center">
                   <div class="col-md-4 mb-4">
-                    <div class="card"><img class="card-img-top" src="{{asset('assets/img/marketing/marketing01.png')}}" alt="" />
-                      <div class="card-body ps-0">
+                    <div class="card-book card-span text-white h-100" style="background-color:#E5E5E5"><center><img class="img-thumbnail" src="{{ asset('assets/img/sirkulasi/lord-rings-2.png') }}" alt="..." /></center>
+                      <div class="card-book-body ps-0" style="background-color:#ffffff">
                         <p class="text-secondary">By <a class="fw-bold text-decoration-none me-1" href="#">Abdullah</a>|<span class="ms-1">03 March 2019</span></p>
                         <h3 class="fw-bold">Increasing Prosperity With Positive Thinking</h3>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-4 mb-4">
-                    <div class="card"><img class="card-img-top" src="{{asset('assets/img/marketing/marketing02.png')}}" alt="" />
-                      <div class="card-body ps-0">
+                    <div class="card-book card-span text-white h-100" style="background-color:#E5E5E5"><center><img class="img-thumbnail" src="{{ asset('assets/img/sirkulasi/lord-rings-2.png') }}" alt="..." /></center>
+                      <div class="card-book-body ps-0" style="background-color:#ffffff">
                         <p class="text-secondary">By <a class="fw-bold text-decoration-none me-1" href="#">Abdullah</a>|<span class="ms-1">03 March 2019</span></p>
-                        <h3 class="fw-bold">Motivation Is The First Step To Success</h3>
+                        <h3 class="fw-bold">Increasing Prosperity With Positive Thinking</h3>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-4 mb-4">
-                    <div class="card"><img class="card-img-top" src="{{asset('assets/img/marketing/marketing03.png')}}" alt="" />
-                      <div class="card-body ps-0">
+                    <div class="card-book card-span text-white h-100" style="background-color:#E5E5E5"><center><img class="img-thumbnail" src="{{ asset('assets/img/sirkulasi/lord-rings-2.png') }}" alt="..." /></center>
+                      <div class="card-book-body ps-0" style="background-color:#ffffff">
                         <p class="text-secondary">By <a class="fw-bold text-decoration-none me-1" href="#">Abdullah</a>|<span class="ms-1">03 March 2019</span></p>
-                        <h3 class="fw-bold">Success Steps For Your Personal Or Business Life</h3>
+                        <h3 class="fw-bold">Increasing Prosperity With Positive Thinking</h3>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="carousel-item">
-                <div class="row">
+                <div class="row h-100 align-items-center">
                   <div class="col-md-4 mb-4">
-                    <div class="card"><img class="card-img-top" src="{{asset('assets/img/marketing/marketing01.png')}}" alt="" />
-                      <div class="card-body ps-0">
+                    <div class="card-book card-span text-white h-100" style="background-color:#E5E5E5"><center><img class="img-thumbnail" src="{{ asset('assets/img/sirkulasi/lord-rings-2.png') }}" alt="..." /></center>
+                      <div class="card-book-body ps-0" style="background-color:#ffffff">
                         <p class="text-secondary">By <a class="fw-bold text-decoration-none me-1" href="#">Abdullah</a>|<span class="ms-1">03 March 2019</span></p>
                         <h3 class="fw-bold">Increasing Prosperity With Positive Thinking</h3>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-4 mb-4">
-                    <div class="card"><img class="card-img-top" src="{{asset('assets/img/marketing/marketing02.png')}}" alt="" />
-                      <div class="card-body ps-0">
+                    <div class="card-book card-span text-white h-100" style="background-color:#E5E5E5"><center><img class="img-thumbnail" src="{{ asset('assets/img/sirkulasi/lord-rings-2.png') }}" alt="..." /></center>
+                      <div class="card-book-body ps-0" style="background-color:#ffffff">
                         <p class="text-secondary">By <a class="fw-bold text-decoration-none me-1" href="#">Abdullah</a>|<span class="ms-1">03 March 2019</span></p>
-                        <h3 class="fw-bold">Motivation Is The First Step To Success</h3>
+                        <h3 class="fw-bold">Increasing Prosperity With Positive Thinking</h3>
                       </div>
                     </div>
                   </div>
                   <div class="col-md-4 mb-4">
-                    <div class="card"><img class="card-img-top" src="{{asset('assets/img/marketing/marketing03.png')}}" alt="" />
-                      <div class="card-body ps-0">
+                    <div class="card-book card-span text-white h-100" style="background-color:#E5E5E5"><center><img class="img-thumbnail" src="{{ asset('assets/img/sirkulasi/lord-rings-2.png') }}" alt="..." /></center>
+                      <div class="card-book-body ps-0" style="background-color:#ffffff">
                         <p class="text-secondary">By <a class="fw-bold text-decoration-none me-1" href="#">Abdullah</a>|<span class="ms-1">03 March 2019</span></p>
-                        <h3 class="fw-bold">Success Steps For Your Personal Or Business Life</h3>
+                        <h3 class="fw-bold">Increasing Prosperity With Positive Thinking</h3>
                       </div>
                     </div>
                   </div>
