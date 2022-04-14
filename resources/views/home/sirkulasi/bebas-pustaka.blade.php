@@ -47,7 +47,7 @@
                     <th scope="row">1</th>
                     <td>27 Maret 2022</td>
                     <td><span class="badge rounded-pill bg-success text-white">Diterima</span></td>
-                    <td><span class="badge rounded-pill bg-primary text-white">Download File</span></td>
+                    <td><span class="btn badge rounded-pill bg-primary text-white">Download File</span></td>
                   </tr>
                 </tbody>
               </table>
