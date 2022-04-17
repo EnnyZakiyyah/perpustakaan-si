@@ -24,7 +24,8 @@
               <li><a class="dropdown-item" href="/home/layanan/bibliography">Bibliography</a></li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="/home/koleksi-digital/koleksi-digital">Koleksi Digital</a></li>
+          {{-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="/sirkulasi" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Koleksi Digital
             </a>
@@ -36,7 +37,7 @@
               <li><a class="dropdown-item" href="/home/koleksi-digital/laporan-program">Laporan Program</a></li>
               <li><a class="dropdown-item" href="/home/koleksi-digital/softfile">Softfile</a></li>
             </ul>
-          </li>
+          </li> --}}
         </ul>
         <div class="d-flex ms-lg-4"><a class="btn btn-secondary-outline" href="/sign-in">Sign In</a><a class="btn btn-warning ms-3" href="/sign-up">Sign Up</a></div>
       </div>

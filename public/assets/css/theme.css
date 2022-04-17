@@ -2573,8 +2573,8 @@ textarea.form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #2F281E;
-  background-color: #FFFEFE;
+  color: #476BB5;
+  background-color: rgba(0, 51, 153, 0.28);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23979797' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 1.563rem center;
@@ -2587,10 +2587,10 @@ textarea.form-control-lg {
 }
 
 .form-select:focus {
-  border-color: #ffcc80;
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 0.25rem rgba(255, 153, 0, 0.25);
-  box-shadow: 0 0 0 0.25rem rgba(255, 153, 0, 0.25);
+  border-color: #476BB5;
+  /* outline: 0; */
+  /* -webkit-box-shadow: 0 0 0 0.25rem rgba(255, 153, 0, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(255, 153, 0, 0.25); */
 }
 
 .form-select[multiple], .form-select[size]:not([size="1"]) {
@@ -3112,7 +3112,7 @@ textarea.form-control-lg {
 }
 
 .was-validated .form-select:valid, .form-select.is-valid {
-  border-color: #79B93C;
+  border-color: #476BB5;
 }
 
 .was-validated .form-select:valid:not([multiple]):not([size]), .was-validated .form-select:valid:not([multiple])[size="1"], .form-select.is-valid:not([multiple]):not([size]), .form-select.is-valid:not([multiple])[size="1"] {
@@ -3123,9 +3123,9 @@ textarea.form-control-lg {
 }
 
 .was-validated .form-select:valid:focus, .form-select.is-valid:focus {
-  border-color: #79B93C;
-  -webkit-box-shadow: 0 0 0 0.25rem rgba(121, 185, 60, 0.25);
-  box-shadow: 0 0 0 0.25rem rgba(121, 185, 60, 0.25);
+  border-color: #476BB5;
+  /* -webkit-box-shadow: 0 0 0 0.25rem rgba(121, 185, 60, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(121, 185, 60, 0.25); */
 }
 
 .was-validated .form-check-input:valid, .form-check-input.is-valid {
@@ -17767,6 +17767,242 @@ iframe {
   width: 70px;
   height: 70px;
 }
+
+//Detail Buku
+/* This css file is to over write bootstarp css
+---------------------------------------------------------------------- */
+
+
+/*
+Theme Name: Modern - Bootstrap 4 Cards
+Theme URI: http://adamthemes.com/
+Author: AdamThemes
+Author URI: http://adamthemes.com/
+Description: Modern - Bootstrap 4 Cards by AdamThemes
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: card, cards, css3, modern, adamthemes, bootstrap, profile
+*---------------------------------------------------------------------- */
+
+
+/*---------------------------------------------------------------------- 
+TABLE OF CONTENTS
+
+// 1. SECTIONS
+// 2. CARDS
+//      2.1 Card Table 
+//      2.1 Card Blog 
+//      2.1 Card Background 
+//      2.1 Card Profile 
+//      2.1 Card Category 
+//      2.1 Card Author 
+//      2.1 Card Product
+//      2.1 Card Testimonial
+//      2.1 Text Color
+// 3. BUTTONS
+// 4. SOCIAL MEDIA BUTTONS
+// 5. BOOTSTRAP COL-MD-12 CLASS
+// 6. FONT AWESOME FA CLASS
+
+------------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------- /
+SECTIONS
+----------------------------------------------------------------------- */
+
+
+
+.section-gray {
+  background: #E5E5E5;
+  padding: 60px 0 30px 0;
+}
+
+
+/*---------------------------------------------------------------------- /
+CARDS
+----------------------------------------------------------------------- */
+
+.box-detil{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 60px 0 30px 0;
+  background: #E5E5E5;
+}
+
+.card-detil {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.87);
+  background: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card-image {
+  overflow: hidden;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top:-150px;
+  /* margin-bottom : 50px; */
+  border-radius: 6px;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card-image img{
+  width: 50%;
+  height: auto;
+  border-radius: 6px;
+  pointer-events: none;
+  padding : 25px;
+  /* position: absolute; */
+}
+
+/* .card-detil .card-image {
+  bottom:100px;
+  height: 100%;
+  width:400px;
+  position: absolute;
+  overflow: hidden;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: -30px;
+  border-radius: 6px;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  background-attachment:fixed;
+} */
+
+/* .card-detil .card-image img {
+  width: 50%;
+  height: auto;
+  border-radius: 6px;
+  pointer-events: none;
+  padding: 0.25rem;
+  
+  padding : 25px;
+} */
+
+.card-detil .card-image .card-caption {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #fff;
+  font-size: 1.3em;
+  text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
+}
+
+/* .card-detil img {
+  width: 100%;
+  height: auto;
+} */
+
+.img-raised {
+  background-color: transparent;
+  border: transparent;
+}
+
+/* ============ Card Table ============ */
+
+.table {
+  margin-bottom: 0px;
+
+}
+
+.card-detil .table {
+  padding: 15px 30px 15px 15px;
+}
+
+.card-detil .table th {
+  font-weight: 400 !important;
+}
+
+.card-detil .table th, td {
+  text-align : left;
+}
+
+.card-detil [class*="table-"] {
+  color: #000000;
+  border-radius: 6px;
+}
+
+.card-detil [class*="table-"] .card-caption a,
+.card-detil [class*="table-"] .card-caption,
+.card-detil [class*="table-"] .icon i {
+  color: #FFFFFF;
+}
+
+.card-detil [class*="table-"] .icon i {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.card-detil [class*="table-"] .author a,
+.card-detil [class*="table-"] .ftr .stats,
+.card-detil [class*="table-"] .category,
+.card-detil [class*="table-"] .card-description {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card-detil [class*="table-"] .author a:hover,
+.card-detil [class*="table-"] .author a:focus,
+.card-detil [class*="table-"] .author a:active {
+  color: #FFFFFF;
+}
+
+.card-detil [class*="table-"] h1 small,
+.card-detil [class*="table-"] h2 small,
+.card-detil [class*="table-"] h3 small {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+.card-blog .card-caption {
+  margin-top: 5px;
+}
+
+.card-blog .card-image + .category {
+  margin-top: 20px;
+}
+
+.card-background .table {
+  position: relative;
+  z-index: 2;
+  min-height: 280px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.card-background .category,
+.card-background .card-description,
+.card-background small {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card-background .card-caption {
+  color: #FFFFFF;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+
+/* ============ Card Category ============ */
+
+.card-product .card-caption,
+.card-product .category,
+.card-product .card-description {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
 
 
 /* @media (min-width: 768px) { */

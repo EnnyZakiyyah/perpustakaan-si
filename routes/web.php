@@ -27,6 +27,9 @@ Route::get('/home/sirkulasi/pengembalian-buku', function () {
 Route::get('/home/sirkulasi/penelusuran-katalog', function () {
     return view('home.sirkulasi.penelusuran-katalog');
 });
+Route::get('/home/sirkulasi/penelusuran-katalog/detil', function () {
+    return view('home.detil.detil-penelusuran-katalog');
+});
 Route::get('/home/sirkulasi/bebas-pustaka', function () {
     return view('home.sirkulasi.bebas-pustaka');
 });
@@ -38,26 +41,36 @@ Route::get('/home/layanan/keanggotaan', function () {
 Route::get('/home/layanan/bibliography', function () {
     return view('home.layanan.bibliography');
 });
+Route::get('/home/layanan/bibliography/detil', function () {
+    return view('home.layanan.detil-bibliography');
+});
 
 //Home-Koleksi-Digital
-Route::get('/home/koleksi-digital/booklet', function () {
-    return view('home.koleksi-digital.booklet');
+Route::get('/home/koleksi-digital/koleksi-digital', function () {
+    return view('home.koleksi-digital');
 });
-Route::get('/home/koleksi-digital/buku', function () {
-    return view('home.koleksi-digital.buku');
+Route::get('/home/koleksi-digital/koleksi-digital/detil', function () {
+    return view('home.detil-koleksi-digital');
 });
-Route::get('/home/koleksi-digital/laporan-program', function () {
-    return view('home.koleksi-digital.laporan-program');
-});
-Route::get('/home/koleksi-digital/laporan-ta', function () {
-    return view('home.koleksi-digital.laporan-ta');
-});
-Route::get('/home/koleksi-digital/majalah', function () {
-    return view('home.koleksi-digital.majalah');
-});
-Route::get('/home/koleksi-digital/softfile', function () {
-    return view('home.koleksi-digital.softfile');
-});
+
+// Route::get('/home/koleksi-digital/booklet', function () {
+//     return view('home.koleksi-digital.booklet');
+// });
+// Route::get('/home/koleksi-digital/buku', function () {
+//     return view('home.koleksi-digital.buku');
+// });
+// Route::get('/home/koleksi-digital/laporan-program', function () {
+//     return view('home.koleksi-digital.laporan-program');
+// });
+// Route::get('/home/koleksi-digital/laporan-ta', function () {
+//     return view('home.koleksi-digital.laporan-ta');
+// });
+// Route::get('/home/koleksi-digital/majalah', function () {
+//     return view('home.koleksi-digital.majalah');
+// });
+// Route::get('/home/koleksi-digital/softfile', function () {
+//     return view('home.koleksi-digital.softfile');
+// });
 
 //Auth
 Route::get('/sign-in', function () {

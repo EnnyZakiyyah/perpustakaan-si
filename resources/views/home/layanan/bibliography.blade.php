@@ -27,7 +27,17 @@
         </div>
         <div class="col-3">
             <form>
-                <div class="search rounded-pill"><input type="text" class="form-control rounded-pill" placeholder="Jenis"> <i class="fa fa-search"></i></div>
+                <form>
+                    <select class="form-select rounded-pill" aria-label="Default select example">
+                      <option selected>Jenis</option>
+                      <option value="1">Booklet</option>
+                      <option value="2">Buku</option>
+                      <option value="3">Laporan Program</option>
+                      <option value="4">Laporan TA</option>
+                      <option value="5">Majalah</option>
+                      <option value="6">Softfile</option>
+                    </select>
+                </form>
             </form>
         </div>
         <div class="col-2">

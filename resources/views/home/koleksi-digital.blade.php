@@ -2,13 +2,13 @@
 
 @section('container')
 <div class="container">
-<h1 class="pt-5 mb-2 fs-7 fw-bold"><span style="color: #002147"> Sirkulasi </span></h1>
+<h1 class="pt-5 mb-2 fs-7 fw-bold"><span style="color: #002147"> Koleksi Digital </span></h1>
     
     <!--Header-->
     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Penelusuran Katalog</li>
+        <li class="breadcrumb-item active" aria-current="page">Koleksi Digital</li>
       </ol>
     </nav>
   
@@ -27,7 +27,6 @@
         </div>
         <div class="col-3">
             <form>
-              <form>
                 <select class="form-select rounded-pill" aria-label="Default select example">
                   <option selected>Jenis</option>
                   <option value="1">Booklet</option>
@@ -37,7 +36,6 @@
                   <option value="5">Majalah</option>
                   <option value="6">Softfile</option>
                 </select>
-            </form>
             </form>
         </div>
         <div class="col-2">
@@ -49,7 +47,7 @@
   </section>
 
 
-     <!--Penelusuran Katalog-->
+     <!--Koleksi Digital-->
   <section class="pt-2">
 
     <div class="container">
@@ -61,7 +59,7 @@
                 </div>
               </div>
                 <div class="card-body">
-                  <h6 class="pt-5">The Lord of The Rings is an epic high-fantasy</h6><a class="text-muted stretched-link text-decoration-none" style="font-size: 13px" href="sirkulasi/penelusuran-katalog/detil">J.R.R Tolkien</a>
+                  <h6 class="pt-5">The Lord of The Rings is an epic high-fantasy</h6><a class="text-muted stretched-link text-decoration-none" style="font-size: 13px" href="#!">J.R.R Tolkien</a>
                 </div>
             </div>
           <div class="col-md-4 mb-4">
