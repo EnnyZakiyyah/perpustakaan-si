@@ -57,17 +57,32 @@
                                     <tr>
                                       <th scope="row">Judul</th>
                                       <td >:</td>
-                                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam illum quasi error libero, nemo incidunt illo fugit dolore, rem fugiat tenetur pariatur maxime veritatis. Quibusdam iure rerum maiores maxime at.</td>
+                                      <td>Lorem ipsum dolor sit amet, </td>
                                     </tr>
                                     <tr>
                                       <th scope="row">Penerbit</th>
                                       <td>:</td>
-                                      <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ipsa, ducimus quibusdam quae tempore incidunt, in id recusandae iste delectus, repudiandae culpa amet odit molestiae minima saepe quasi aperiam ratione!</td>
+                                      <td>Lorem ipsum dolor sit amet</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">Penulis</th>
                                       <td>:</td>
-                                      <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam autem saepe officiis molestias dolorum est hic odit itaque officia nam. Doloremque dignissimos provident quibusdam tempore. Sit quod libero aperiam similique?</td>
+                                      <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Judul</th>
+                                      <td >:</td>
+                                      <td>Lorem ipsum dolor sit amet, </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Judul</th>
+                                      <td >:</td>
+                                      <td>Lorem ipsum dolor sit amet, </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Judul</th>
+                                      <td >:</td>
+                                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt voluptatum aliquam atque maiores sed corrupti, voluptatibus nostrum tenetur quibusdam laborum. Modi, eius rerum. Quo, illum esse. Eveniet quaerat explicabo inventore.</td>
                                     </tr>
                                   </tbody>
                                 
