@@ -42,7 +42,7 @@ Route::get('/home/layanan/bibliography', function () {
     return view('home.layanan.bibliography');
 });
 Route::get('/home/layanan/bibliography/detil', function () {
-    return view('home.layanan.detil-bibliography');
+    return view('home.detil.detil-bibliography');
 });
 
 //Home-Koleksi-Digital
