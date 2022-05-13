@@ -80,3 +80,9 @@ Route::get('/sign-in', function () {
 Route::get('/sign-up', function () {
     return view('sign-up');
 });
+
+
+//Dashboard
+Route::get('/dashboard', function () {
+    return view('dashboard.dashboard');
+});

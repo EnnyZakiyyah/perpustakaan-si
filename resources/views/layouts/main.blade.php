@@ -48,7 +48,7 @@
     <main class="main" id="top">
       
       <!--Navbar-->
-      @include('partials.navbar')
+      @include('partials.navbar-home')
    
       <!-- ============================================-->
       <!-- HEADER ============================-->
