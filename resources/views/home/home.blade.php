@@ -23,152 +23,50 @@
     
           <!-- ============================================-->
           <!-- <INFORMATION> begin ========================-->
-{{--     
+    
             <section class="py-0 mt-3" style="margin-top:-5.8rem">
     
               <div class="container">
                 <div class="row">
-                  <div class="card card-span bg-secondary">
-                    <div class="card-body">
+                  <div class="card-home card-span bg-secondary">
+                    <div class="card-body-home">
                       <div class="row flex-center gx-0">
                         <div class="col-lg-4 col-xl-2 text-center text-xl-start"><img src="{{asset('assets/img/information/megaphone.png')}}" width="170" alt="..." /></div>
                         <div class="titles col-lg-8 col-xl-4">
-                          <h1 class="text-light fs-lg-4 fs-xl-5">Our <br/><span style="color: #FF9900">Information ! </span></h1>
-                        </div>
-                        <div class="col-lg-6 col-xl-6 text-center justify-content-end">
-                          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <div class="carousel-caption d-none d-md-block">
-                                  <h5>First slide label</h5>
-                                  <p>Some representative placeholder content for the first slide.</p>
-                                </div>
-                              </div>
-                              <div class="carousel-item">
-                                <div class="carousel-caption d-none d-md-block">
-                                  <h5>First slide label</h5>
-                                  <p>Some representative placeholder content for the first slide.</p>
-                                </div>
-                              </div>
-                              <div class="carousel-item">
-                                <div class="carousel-caption d-none d-md-block">
-                                  <h5>First slide label</h5>
-                                  <p>Some representative placeholder content for the first slide.</p>
-                                </div>
-                              </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>  
-            </section> --}}
-<!--================================================================-->
-            <section class="py-0 mt-3" style="margin-top:-5.8rem">
-    
-              <div class="container">
-                <div class="row">
-                  <div class="card card-span bg-secondary">
-                    <div class="card-body">
-                      <div class="row flex-center gx-0">
-                        <div class="col-lg-4 col-xl-2 text-center text-xl-start"><img src="{{asset('assets/img/information/megaphone.png')}}" width="170" alt="..." /></div>
-                        <div class="titles col-lg-8 col-xl-4">
-                          <h1 class="text-light fs-lg-4 fs-xl-5">Our <br class="d-none d-xl-block"/><span style="color: #FF9900">Information ! </span></h1>
+                          <h1 class="text-light fs-lg-4 fs-xl-5">Our <br/><span style="color: #FF9900">Information !</span></h1>
                         </div>
                         <div class="col-lg-12 col-xl-6 order-1 text-center text-white">
-                          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                               <div class="carousel-item active">
-                                  <h1 class="text-white">TANGGAL 5 LIBUR</h1>
-                                  <p>Natal</p>
+                                <h5 class="display-5 text-light text-center text-xl-center">11 : 02 : 45 : 21</h5>
+                                <p>Natal</p>
                               </div>
                               <div class="carousel-item">
-                                <h1 class="text-white">TANGGAL 1 LIBUR</h1>
-                                
+                                <h5 class="display-5 text-light text-center text-xl-center">Libur01</h5>
+                                <p>Natal</p>
                               </div>
                               <div class="carousel-item">
-                                <h1 class="text-white">TANGGAL 5 LIBUR</h1>
+                                <h5 class="display-5 text-light text-center text-xl-center">Libur</h5>
+                                <p>Natal</p>
                               </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                               <span class="visually-hidden">Previous</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                               <span class="carousel-control-next-icon" aria-hidden="true"></span>
                               <span class="visually-hidden">Next</span>
                             </button>
                           </div>
-                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>  
-            </section>
-            <br/>
-            {{-- <section class="py-0 mt-3" style="margin-top:-5.8rem">
-    
-              <div class="container">
-                <div class="row">
-                  <div class="card card-span bg-secondary">
-                    <div class="card-body">
-                      <div class="row flex-center gx-0">
-                        <div class="col-lg-4 col-xl-2 text-center text-xl-start"><img src="{{asset('assets/img/information/megaphone.png')}}" width="170" alt="..." /></div>
-                        <div class="col-lg-8 col-xl-4">
-                          <h1 class="text-light fs-lg-4 fs-xl-5">Upcoming Our <span class="text-primary">Basic in Python </span>Course!</h1>
-                        </div>
-                        <div class="col-lg-12 col-xl-6 align-items-end">
-                        
-                           <center> 
-                            <div class="cards" style="width: 18rem;">
-                             
-                              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                  <div class="carousel-item active">
-                                      <h1 class="text-white">TANGGAL 5 LIBUR</h1>
-                                      <p>Natal</p>
-                                  </div>
-                                  <div class="carousel-item">
-                                    <h1 class="text-white">TANGGAL 1 LIBUR</h1>
-                                    
-                                  </div>
-                                  <div class="carousel-item">
-                                    <h1 class="text-white">TANGGAL 5 LIBUR</h1>
-                                  </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                  <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                  <span class="visually-hidden">Next</span>
-                                </button>
-                              </div>
-                            </div>
-
-                            </div>
-                          </center>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </section> --}}
-           
+            </div>
+      </section>
       <!-- <INFORMATION> close ========================-->
       <!-- ============================================-->
 

@@ -70,7 +70,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
+                <tr> 
                   <th scope="row">1</th>
                   <td>000851829794</td>
                   <td>9792029710</td>
