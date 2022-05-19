@@ -74,11 +74,11 @@ Route::get('/home/koleksi-digital/koleksi-digital/detil', function () {
 
 //Auth
 Route::get('/sign-in', function () {
-    return view('sign-in');
+    return view('auth/sign-in');
 });
 
 Route::get('/sign-up', function () {
-    return view('sign-up');
+    return view('auth/sign-up');
 });
 
 

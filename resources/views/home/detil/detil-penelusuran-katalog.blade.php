@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="container">
+<div class="container" style="background-color: #E5E5E5">
 <h1 class="pt-5 mb-2 fs-7 fw-bold"><span style="color: #002147"> Detail Penelusuran Katalog </span></h1>
     
     <!--Header-->
@@ -14,7 +14,7 @@
     </nav>
 
      <!--Detil-->
-    <section class="pt-5">
+    <section class="pt-3">
         <div class="box-detil">
             <div class="container py-3">
                 <div class="card-detil">
@@ -57,32 +57,32 @@
                                     <tr>
                                       <th scope="row">Judul</th>
                                       <td >:</td>
-                                      <td>Lorem ipsum dolor sit amet, </td>
+                                      <td style="text-align: left !important">Lorem ipsum dolor sit amet, </td>
                                     </tr>
                                     <tr>
                                       <th scope="row">Penerbit</th>
                                       <td>:</td>
-                                      <td>Lorem ipsum dolor sit amet</td>
+                                      <td style="text-align: left !important">Lorem ipsum dolor sit amet</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">Penulis</th>
                                       <td>:</td>
-                                      <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+                                      <td style="text-align: left !important">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">Judul</th>
                                       <td >:</td>
-                                      <td>Lorem ipsum dolor sit amet, </td>
+                                      <td style="text-align: left !important">Lorem ipsum dolor sit amet, </td>
                                     </tr>
                                     <tr>
                                       <th scope="row">Judul</th>
                                       <td >:</td>
-                                      <td>Lorem ipsum dolor sit amet, </td>
+                                      <td style="text-align: left !important">Lorem ipsum dolor sit amet, </td>
                                     </tr>
                                     <tr>
                                       <th scope="row">Judul</th>
                                       <td >:</td>
-                                      <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt voluptatum aliquam atque maiores sed corrupti, voluptatibus nostrum tenetur quibusdam laborum. Modi, eius rerum. Quo, illum esse. Eveniet quaerat explicabo inventore.</td>
+                                      <td style="text-align: left !important">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt voluptatum aliquam atque maiores sed corrupti, voluptatibus nostrum tenetur quibusdam laborum. Modi, eius rerum. Quo, illum esse. Eveniet quaerat explicabo inventore.</td>
                                     </tr>
                                   </tbody>
                                 
