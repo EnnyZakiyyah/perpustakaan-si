@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
+use App\Models\Katalog;
+use App\Models\Category;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,5 +17,54 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+
+        User::create([
+            'name' => 'Enny Zakiyyah',
+            'email' => 'enny.9h08@gmail.com',
+            'password' => bcrypt('12345')
+        ]);
+
+        User::create([
+            'name' => 'Na Jaemin',
+            'email' => 'na.jaemin@gmail.com',
+            'password' => bcrypt('12345')
+        ]);
+
+        Category::create([
+            'name' => 'Majalah',
+            'slug' => 'majalah'
+        ]);
+
+        Category::create([
+            'name' => 'Buku',
+            'slug' => 'buku'
+        ]);
+
+        Katalog::create([
+            'title' => 'The Lord of The Rings',
+            'slug' => 'the-lord-of-the-rings',
+            'excerpt' => 'Lorem ipsum dolor sit amet,',
+            'body' => 'consectetur adipisicing elit. Dolor quia incidunt voluptas molestias, reprehenderit alias non voluptate, ea, magnam nesciunt optio cupiditate! Reiciendis inventore repudiandae dignissimos, quisquam quos voluptatum quasi!',
+            'category_id' => 1,
+            'user_id' => 1
+        ]);
+
+        Katalog::create([
+            'title' => 'Naruto',
+            'slug' => 'naruto',
+            'excerpt' => 'Lorem ipsum dolor sit amet,',
+            'body' => 'consectetur adipisicing elit. Dolor quia incidunt voluptas molestias, reprehenderit alias non voluptate, ea, magnam nesciunt optio cupiditate! Reiciendis inventore repudiandae dignissimos, quisquam quos voluptatum quasi!',
+            'category_id' => 1,
+            'user_id' => 1
+        ]);
+
+        Katalog::create([
+            'title' => 'Boruto',
+            'slug' => 'boruto',
+            'excerpt' => 'Lorem ipsum dolor sit amet,',
+            'body' => 'consectetur adipisicing elit. Dolor quia incidunt voluptas molestias, reprehenderit alias non voluptate, ea, magnam nesciunt optio cupiditate! Reiciendis inventore repudiandae dignissimos, quisquam quos voluptatum quasi!',
+            'category_id' => 2,
+            'user_id' => 2
+        ]);
     }
 }
