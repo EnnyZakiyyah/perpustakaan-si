@@ -2,14 +2,14 @@
 
 @section('container')
 <div class="container" style="background-color: #E5E5E5">
-<h1 class="pt-5 mb-2 fs-7 fw-bold"><span style="color: #002147"> Detail Penelusuran Katalog </span></h1>
+<h1 class="pt-5 mb-2 fs-7 fw-bold"><span style="color: #002147"> {{ $katalog->title }} </span></h1>
     
     <!--Header-->
     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
         <li class="breadcrumb-item"><a href="/home/sirkulasi/penelusuran-katalog">Penelusuran Katalog</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Detail Penelusuran Katalog</li>
+        <li class="breadcrumb-item active" aria-current="page">{{ $katalog->title }}</li>
       </ol>
     </nav>
 
@@ -57,7 +57,7 @@
                                     <tr>
                                       <th scope="row">Judul</th>
                                       <td >:</td>
-                                      <td style="text-align: left !important">Lorem ipsum dolor sit amet, </td>
+                                      <td style="text-align: left !important">{{ $katalog->title }}</td>
                                     </tr>
                                     <tr>
                                       <th scope="row">Penerbit</th>
@@ -67,7 +67,7 @@
                                     <tr>
                                       <th scope="row">Penulis</th>
                                       <td>:</td>
-                                      <td style="text-align: left !important">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</td>
+                                      <td style="text-align: left !important">J.K Rowling in <a href="/categories/{{ $katalog->category->slug }}">{{ $katalog->category->name }}</a></td>
                                     </tr>
                                     <tr>
                                       <th scope="row">Judul</th>
@@ -80,9 +80,9 @@
                                       <td style="text-align: left !important">Lorem ipsum dolor sit amet, </td>
                                     </tr>
                                     <tr>
-                                      <th scope="row">Judul</th>
+                                      <th scope="row">Sinopsis</th>
                                       <td >:</td>
-                                      <td style="text-align: left !important">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt voluptatum aliquam atque maiores sed corrupti, voluptatibus nostrum tenetur quibusdam laborum. Modi, eius rerum. Quo, illum esse. Eveniet quaerat explicabo inventore.</td>
+                                      <td style="text-align: left !important">{!! $katalog->body !!}</td>
                                     </tr>
                                   </tbody>
                                 

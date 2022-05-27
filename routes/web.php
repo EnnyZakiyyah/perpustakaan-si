@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\KatalogController;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,7 +33,7 @@ Route::get('/home/sirkulasi/pengembalian-buku', function () {
     ]);
 });
 Route::get('/home/sirkulasi/penelusuran-katalog', [KatalogController::class, 'index']);
-Route::get('/home/sirkulasi/penelusuran-katalog/{slug}', [KatalogController::class, 'show']);
+Route::get('/home/sirkulasi/penelusuran-katalog/{katalog:slug}', [KatalogController::class, 'show']);
 Route::get('/home/sirkulasi/bebas-pustaka', function () {
     return view('home.sirkulasi.bebas-pustaka', [
         "title" => "Perpustakaan | Sirkulasi",
@@ -68,24 +69,14 @@ Route::get('/home/koleksi-digital/koleksi-digital/detil', function () {
     ]);
 });
 
-// Route::get('/home/koleksi-digital/booklet', function () {
-//     return view('home.koleksi-digital.booklet');
-// });
-// Route::get('/home/koleksi-digital/buku', function () {
-//     return view('home.koleksi-digital.buku');
-// });
-// Route::get('/home/koleksi-digital/laporan-program', function () {
-//     return view('home.koleksi-digital.laporan-program');
-// });
-// Route::get('/home/koleksi-digital/laporan-ta', function () {
-//     return view('home.koleksi-digital.laporan-ta');
-// });
-// Route::get('/home/koleksi-digital/majalah', function () {
-//     return view('home.koleksi-digital.majalah');
-// });
-// Route::get('/home/koleksi-digital/softfile', function () {
-//     return view('home.koleksi-digital.softfile');
-// });
+// Kategori
+Route::get('/categories/{category:slug}', function(Category $category){
+    return view('home/kategori/category', [
+        'title' => $category->name,
+        'katalogs' => $category->katalogs,
+        'category' => $category->name
+    ]);
+});
 
 //Auth
 Route::get('/sign-in', function () {

@@ -15,11 +15,11 @@ class KatalogController extends Controller
         ]);
     }
 
-    public function show($slug)
+    public function show(Katalog $katalog)
     {
         return view('home.detil.detil-penelusuran-katalog', [
             "title" => "Perpustakaan | Sirkulasi",
-            "katalog" => "Katalog::find($slug)"
+            "katalog" => $katalog
         ]);
     }
 }
