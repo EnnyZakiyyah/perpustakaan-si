@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KatalogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,16 +31,8 @@ Route::get('/home/sirkulasi/pengembalian-buku', function () {
         "title" => "Perpustakaan | Sirkulasi",
     ]);
 });
-Route::get('/home/sirkulasi/penelusuran-katalog', function () {
-    return view('home.sirkulasi.penelusuran-katalog', [
-        "title" => "Perpustakaan | Sirkulasi",
-    ]);
-});
-Route::get('/home/sirkulasi/penelusuran-katalog/detil', function () {
-    return view('home.detil.detil-penelusuran-katalog', [
-        "title" => "Perpustakaan | Sirkulasi",
-    ]);
-});
+Route::get('/home/sirkulasi/penelusuran-katalog', [KatalogController::class, 'index']);
+Route::get('/home/sirkulasi/penelusuran-katalog/{slug}', [KatalogController::class, 'show']);
 Route::get('/home/sirkulasi/bebas-pustaka', function () {
     return view('home.sirkulasi.bebas-pustaka', [
         "title" => "Perpustakaan | Sirkulasi",
