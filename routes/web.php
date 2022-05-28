@@ -74,7 +74,7 @@ Route::get('/home/koleksi-digital/koleksi-digital/detil', function () {
 Route::get('/categories/{category:slug}', function (Category $category) {
     return view('home.sirkulasi.penelusuran-katalog', [
         'title' => "Katalog By Kategori $category->name",
-        'katalogs' => $category->katalogs
+        'katalogs' => $category->katalogs->load('category', 'author')
     ]);
 });
 
@@ -82,7 +82,7 @@ Route::get('/categories/{category:slug}', function (Category $category) {
 Route::get('/authors/{author:username}', function (User $author) {
     return view('home.sirkulasi.penelusuran-katalog', [
         'title' => "Katalog By Kategori $author->name",
-        'katalogs' => $author->katalogs
+        'katalogs' => $author->katalogs->load('category', 'author')
     ]);
 });
 
