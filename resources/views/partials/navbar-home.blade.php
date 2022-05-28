@@ -3,9 +3,9 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
       <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link {{ ($title === "Perpustakaan | LPTP Surakarta") ? 'active' : '' }}" aria-current="page" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link {{ ($title === "LPTP Surakarta") ? 'active' : '' }}" aria-current="page" href="/">Home</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle {{ ($title === "Perpustakaan | Sirkulasi") ? 'active' : '' }}" href="/sirkulasi" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle {{ ($title === "Sirkulasi") ? 'active' : '' }}" href="/sirkulasi" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Sirkulasi
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -16,7 +16,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle {{ ($title === "Perpustakaan | Layanan") ? 'active' : '' }}" href="/layanan" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle {{ ($title === "Layanan") ? 'active' : '' }}" href="/layanan" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Layanan
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -26,7 +26,7 @@
           </li>
           <li class="nav-item"><a class="nav-link" aria-current="page" href="/home/koleksi-digital/koleksi-digital">Koleksi Digital</a></li>
         </ul>
-        <div class="d-flex ms-lg-4"><a class="btn btn-secondary-outline {{ ($title === "Perpustakaan | Sign In") ? 'active' : '' }}" href="/sign-in">Sign In</a><a class="btn btn-warning ms-3" href="/sign-up">Sign Up</a></div>
+        <div class="d-flex ms-lg-4"><a class="btn btn-secondary-outline {{ ($title === "Sign In") ? 'active' : '' }}" href="/sign-in">Sign In</a><a class="btn btn-warning ms-3" href="/sign-up">Sign Up</a></div>
       </div>
     </div>
   </nav>

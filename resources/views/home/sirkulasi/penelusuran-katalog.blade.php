@@ -2,7 +2,7 @@
 
 @section('container')
   <div class="container">
-    <h1 class="pt-5 mb-2 fs-7 fw-bold"><span style="color: #002147"> Sirkulasi </span></h1>
+    <h1 class="pt-5 mb-2 fs-7 fw-bold"><span style="color: #002147">{{ $title }} </span></h1>
     
     <!--Header-->
     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
@@ -61,7 +61,7 @@
                     </div>
                   </div>
                     <div class="card-body">
-                      <h6 class="pt-5">{{ $katalog->title }}</h6><a class="text-muted stretched-link text-decoration-none" style="font-size: 13px" href="/home/sirkulasi/penelusuran-katalog/{{ $katalog->slug }}"><a href="#" class="text-muted stretched-link text-decoration-none" style="font-size: 13px">{{ $katalog->user->name }}</a> <a class="text-decoration-none" href="/categories/{{ $katalog->category->slug }}">in {{ $katalog->category->name }}</a></a>
+                      <h6 class="pt-5">{{ $katalog->title }}</h6><p class="text-muted stretched-link text-decoration-none" style="font-size: 13px" href="/home/sirkulasi/penelusuran-katalog/{{ $katalog->slug }}"><a href="/authors/{{ $katalog->author->id }}" class="text-muted stretched-link text-decoration-none" style="font-size: 13px">{{ $katalog->author->name }}</a> <a class="text-decoration-none" href="/categories/{{ $katalog->category->slug }}">in {{ $katalog->category->name }}</a></p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">

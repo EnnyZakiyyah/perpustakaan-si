@@ -10,8 +10,9 @@ class KatalogController extends Controller
     public function index()
     {
         return view('home.sirkulasi.penelusuran-katalog', [
-            "title" => "Perpustakaan | Sirkulasi",
-            "katalogs" => Katalog::all()
+            "title" => "Sirkulasi",
+            // "katalogs" => Katalog::all()
+            "katalogs" => Katalog::latest()->get()
         ]);
     }
 

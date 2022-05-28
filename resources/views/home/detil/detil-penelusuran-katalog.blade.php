@@ -67,7 +67,7 @@
                                     <tr>
                                       <th scope="row">Penulis</th>
                                       <td>:</td>
-                                      <td style="text-align: left !important"><a href="#">{{ $katalog->user->name }}</a> in <a href="/categories/{{ $katalog->category->slug }}">{{ $katalog->category->name }}</a></td>
+                                      <td style="text-align: left !important"><a href="/authors/{{ $katalog->author->username }}">{{ $katalog->author->name }}</a> in <a href="/categories/{{ $katalog->category->slug }}">{{ $katalog->category->name }}</a></td>
                                     </tr>
                                     <tr>
                                       <th scope="row">Judul</th>
