@@ -12,7 +12,7 @@ class KatalogController extends Controller
         return view('home.sirkulasi.penelusuran-katalog', [
             "title" => "Sirkulasi",
             // "katalogs" => Katalog::all()
-            "katalogs" => Katalog::with(['author', 'category'])->latest()->get()
+            "katalogs" => Katalog::latest()->get()
         ]);
     }
 

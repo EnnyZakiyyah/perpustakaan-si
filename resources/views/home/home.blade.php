@@ -17,7 +17,8 @@
                 <div class="col-md-6 text-end">
                   {{-- <img class="pt-7 pt-md-0 img-fluid" src="assets/img/hero/hero-img.png" alt="" /> --}}
                   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
+                    <div class="carousel-inner" style="box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                    border-radius: 20px; -moz-border-radius: 5px;">
                       <div class="carousel-item active">
                         <img src="{{asset('assets/img/header/Slide01.jpg')}}" class="d-block w-100" alt="...">
                       </div>

@@ -8,7 +8,8 @@
     <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a class="text-decoration-none" href="/">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Penelusuran Katalog</li>
+        <li class="breadcrumb-item"><a class="text-decoration-none" href="/home/sirkulasi/penelusuran-katalog">Penelusuran Katalog</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Semua</li>
       </ol>
     </nav>
 
@@ -50,44 +51,29 @@
     
     <!--Penelusuran Katalog-->
   <section class="pt-2">
-    @foreach ($katalogs as $katalog)
         <article>
           <div class="container">
-            <div class="row h-100 align-items-center">
-                <div class="col-md-4 mb-4">
-                  <div class="card card-span text-white h-100" style="background-color: #F9F7F7; border : 1px solid #E5E5E5; "><center><img class="img-thumbnail" src="{{ asset('assets/img/sirkulasi/lord-rings-2.png') }}" alt="..." /></center>
-                    <div class="card-custom-avatar">
-                        <img class="img-fluid" src="{{ asset('assets/img/sirkulasi/lord-of-the-ring.png') }}" alt="Avatar" />
-                    </div>
+            <div class="row">
+              @foreach ($katalogs as $katalog)
+              <div class="col-md-4 mb-4">
+                <div class="card" style="background-color: #F9F7F7; border : 1px solid #E5E5E5; "><center><img class="img-thumbnail" src="{{ asset('assets/img/sirkulasi/lord-rings-2.png') }}" alt="..." /></center>
+                  <div class="card-custom-avatar">
+                      <img class="img-fluid" src="{{ asset('assets/img/sirkulasi/lord-of-the-ring.png') }}" alt="Avatar" />
                   </div>
-                    <div class="card-body">
-                      <h6 class="pt-5">{{ $katalog->title }}</h6><p class="text-muted stretched-link text-decoration-none" style="font-size: 13px" href="/home/sirkulasi/penelusuran-katalog/{{ $katalog->slug }}"><a href="/authors/{{ $katalog->author->id }}" class="text-muted stretched-link text-decoration-none" style="font-size: 13px">{{ $katalog->author->name }}</a> <a class="text-decoration-none" href="/categories/{{ $katalog->category->slug }}">in {{ $katalog->category->name }}</a></p>
-                    </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                  <div class="card card-span text-white h-100" style="background-color: #F9F7F7; border : 1px solid #E5E5E5; "><center><img class="img-thumbnail" src="{{ asset('assets/img/sirkulasi/lord-rings-2.png') }}" alt="..." /></center>
-                    <div class="card-custom-avatar">
-                        <img class="img-fluid" src="{{ asset('assets/img/sirkulasi/lord-of-the-ring.png') }}" alt="Avatar" />
-                    </div>
+                  <div class="card-body">
+                    <h6 class="pt-5">{{ $katalog->title }}</h6>
+                    <p>by <a href="/authors/{{ $katalog->author->username }}" class="text-primary" style="font-size: 13px;">{{ $katalog->author->name }}</a></p>
+                    <p style="font-size: 13px;">2016</p>
+                    <p>{!! $katalog->excerpt !!}
+                    <a href="/home/sirkulasi/penelusuran-katalog/{{ $katalog->slug }}" class="text-primary">Read More...</a></p> 
+                    <a type="button" class="btn btn-outline-secondary btn-sm" style="font-weight: bold;" href="/categories/{{ $katalog->category->slug }}">{{ $katalog->category->name }}</a>
                   </div>
-                    <div class="card-body">
-                      <h6 class="pt-5">{{ $katalog->title }}</h6><a class="text-muted stretched-link text-decoration-none" style="font-size: 13px" href="/home/sirkulasi/penelusuran-katalog/{{ $katalog->slug }}">{{ $katalog->author }}</a>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                  <div class="card card-span text-white h-100" style="background-color: #F9F7F7; border : 1px solid #E5E5E5; "><center><img class="img-thumbnail" src="{{ asset('assets/img/sirkulasi/lord-rings-2.png') }}" alt="..." /></center>
-                    <div class="card-custom-avatar">
-                        <img class="img-fluid" src="{{ asset('assets/img/sirkulasi/lord-of-the-ring.png') }}" alt="Avatar" />
-                    </div>
-                  </div>
-                    <div class="card-body">
-                      <h6 class="pt-5">{{ $katalog->title }}</h6><a class="text-muted stretched-link text-decoration-none" style="font-size: 13px" href="/home/sirkulasi/penelusuran-katalog/{{ $katalog->slug }}">{{ $katalog->author }}</a>
-                    </div>
-                </div>
+              </div>
+              @endforeach
             </div>
           </div>
         </article>
-    @endforeach
 
             <!--PAGINATION-->
             <nav aria-label="Page navigation example">
@@ -109,6 +95,5 @@
             </nav>
           </div>
   </section>
-
   </div>
 @endsection

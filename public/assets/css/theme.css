@@ -222,8 +222,34 @@ a {
   text-decoration: underline;
 }
 
+/* a:hover {
+  color: #FF9900;
+}
+
+
+
+a:active {
+  text-decoration: none;
+}
+
+a.hover:hover {
+  text-decoration: underline;
+} */
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
 a:hover {
   color: #FF9900;
+  text-decoration: underline;
+}
+
+a:active {
   text-decoration: underline;
 }
 
@@ -313,7 +339,7 @@ thead th{
 }
 
 tbody th{
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   font-size: 16px;
   font-family: Poppins;
 }
@@ -5100,14 +5126,18 @@ fieldset:disabled .btn {
 }
 
 .card-body {
-  -webkit-box-flex: 1;
+  /* -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 1rem 1rem;
+  padding: 1rem 1rem; */
   border-style: solid ;
   border-color: #E5E5E5;
   border-width: 1px;
   border-top : transparent;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
 }
 
 .card-body-home {
@@ -5201,6 +5231,16 @@ fieldset:disabled .btn {
   left: 0;
   padding: 1rem;
   border-radius: calc(0.7rem - 1px);
+}
+
+.card-img-top-katalog{
+  padding: 0.25rem;
+  background-color: transparent;
+  border: transparent;
+  padding : 25px;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  height: auto;
 }
 
 .card-img,
@@ -7134,6 +7174,12 @@ fieldset:disabled .btn {
 
 .d-block {
   display: block !important;
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset; */
+  box-shadow: 0 0 5px 5px #2d4369;
+    -moz-box-shadow: 0 0 5px 5px #2d4369;
+    -webkit-box-shadow: 0 0 5px 5px #2d4369;
+    border-radius: 20px;
+    -moz-border-radius: 5px;
 }
 
 .d-grid {
@@ -17578,10 +17624,10 @@ SECTIONS
 
 
 
-.section-gray {
+/* .section-gray {
   background: #E5E5E5;
   padding: 60px 0 30px 0;
-}
+} */
 
 
 /*---------------------------------------------------------------------- /
@@ -17605,13 +17651,59 @@ CARDS
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-.card-image {
+/* BENAR START */
+.card .card-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: inline-block;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  height: auto;
+  width: auto;
+  position: relative;
+  overflow: hidden;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: -30px;
+  border-radius: 6px;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  pointer-events: none;
+  padding: 0.25rem;
+  
+}
+
+.card .card-image .card-caption {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: #fff;
+  font-size: 1em;
+  text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-detail img {
+  width: 100%;
+  height: auto;
+}
+/* BENAR END */
+
+/* .card-image {
   overflow: hidden;
   margin-left: 15px;
   margin-right: 15px;
   margin-top:-30px;
-  /* min-height: 400px; */
-  /* margin-bottom : 50px; */
   border-radius: 6px;
   box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
@@ -17622,8 +17714,8 @@ CARDS
   border-radius: 6px;
   pointer-events: none;
   padding : 25px;
-  /* position: absolute; */
-}
+
+} */
 
 /* .card-detil .card-image {
   bottom:100px;
@@ -17649,14 +17741,14 @@ CARDS
   padding : 25px;
 } */
 
-.card-detil .card-image .card-caption {
+/* .card-detil .card-image .card-caption {
   position: absolute;
   bottom: 15px;
   left: 15px;
   color: #fff;
   font-size: 1.3em;
   text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
-}
+} */
 
 /* .card-detil img {
   width: 100%;
@@ -17766,6 +17858,11 @@ CARDS
 }
 
 
+
+/* .section-gray {
+  background: #E5E5E5;
+  padding: 60px 0 30px 0;
+} */
 
 
 
