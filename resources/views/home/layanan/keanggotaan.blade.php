@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="container" style="background-color: #E5E5E5">
+<div class="container">
 <h1 class="pt-5 mb-2 fs-7 fw-bold"><span style="color: #002147"> Keanggotaan </span></h1>
     
     <!--Header-->
@@ -12,100 +12,70 @@
       </ol>
     </nav>
 
-     <!--Detil-->
-    <section class="pt-3">
-        <div class="box-detil">
-            <div class="container py-3">
-                <div class="card-detil">
-                    <div class="row h-100 align-items-center">
-                        <div class="col-md-5 mb-4">
-                            <div class="card-image h-100" style="background-color: #F9F7F7;">
-                                <a href="#"> <center><img class="img-fluid" src="{{ asset('assets/img/keanggotaan/user.png') }}"></center> </a>
-                            </div>
-                        </div>
-                        <div class="col-md-7 mb-4">
-                            <div class="table">
-                              {{-- <table width="400px">
-                                <caption>------------Lebar Tabel 600px--------------</caption>
-                                    <tr>
-                                        <th width="200px">Judul 1 (width=300px)</th>
-                                        <th width="100px">Judul 2 (width=200px)</th>
-                                        <th width="100px">Judul 3 (width=100px)</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Baris 1, Kolom 1</td>
-                                        <td>Baris 1, Kolom 2</td>
-                                        <td>Baris 1, Kolom 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Data yang sangat panjang, 
-                                            sehingga merusak tampilan dari tabel</td>
-                                        <td>Baris 2, Kolom 2</td>
-                                        <td>Baris 2, Kolom 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Baris 3, Kolom 1</td>
-                                        <td>Baris 3, Kolom 2</td>
-                                        <td>Baris 3, Kolom 3</td>
-                                    </tr>
-                                </table> --}}
-                              <div class="table-responsive-sm">
-                                <table class="table table-hover">
-                                 
-                                  <tbody>
-                                    <tr>
-                                        <th scope="row">Nomor</th>
-                                        <td >:</td>
-                                        <td style="text-align: left !important">123456</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">Nama</th>
-                                        <td>:</td>
-                                        <td style="text-align: left !important">Lorem ipsum dolor sit amet</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">Jenis Kelamin</th>
-                                        <td>:</td>
-                                        <td style="text-align: left !important">Laki-laki</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">Nomor KTP</th>
-                                        <td >:</td>
-                                        <td style="text-align: left !important">4243434</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">Tempat Lahir</th>
-                                        <td >:</td>
-                                        <td style="text-align: left !important">Lorem ipsum dolor sit amet, </td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">Tanggal Lahir</th>
-                                        <td >:</td>
-                                        <td style="text-align: left !important">11-10-1999</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">Alamat</th>
-                                        <td >:</td>
-                                        <td style="text-align: left !important">sdkfjsf</td>
-                                      </tr>
-                                      <tr>
-                                        <th scope="row">Unit Kerja</th>
-                                        <td >:</td>
-                                        <td style="text-align: left !important">Staff</td>
-                                      </tr>
-                                  </tbody>
-                                
-                                </table>
-                              </div>
-                              </div>
-                              
-                      
-                            </div>
-                        </div>
-                    </div>
+    <!--Detil-->
+    <section class="pt-5" >
+      <div class="cards-6 section-gray">
+        <div class="container">
+          <div class="card mb-3" style="box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card-image">
+                  <a href="#"> <img class="img" src="{{ asset('assets/img/design.png') }}">
+                  </a>
+              </div>
+              </div>
+              <div class="col-md-8 py-4 px-4 mb-3">
+                <div class="table-responsive-sm">
+                  <table class="table table-hover">
+                    <tbody>
+                      <tr>
+                        <th scope="row" style="text-align: left;">Nomor</th>
+                        <td >:</td>
+                        <td style="text-align: justify !important">12345</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" style="text-align: left">Nama</th>
+                        <td>:</td>
+                        <td style="text-align: justify !important">Enny Zakiyyah</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" style="text-align: left">Jenis Kelamin</th>
+                        <td>:</td>
+                        <td style="text-align: justify !important">Perempuan</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" style="text-align: left">Nomor KTP</th>
+                        <td>:</td>
+                        <td style="text-align: justify !important">9438398543</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" style="text-align: left">Tempat Lahir</th>
+                        <td>:</td>
+                        <td style="text-align: justify !important">Lorem ipsum dolor sit amet</td>
+                      </tr>
+                      <tr>
+                        <th scope="row" style="text-align: left">Tanggal Lahir</th>
+                        <td >:</td>
+                        <td style="text-align: justify !important">Lorem ipsum dolor sit amet, </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" style="text-align: left">Alamat Kerja</th>
+                        <td >:</td>
+                        <td style="text-align: justify !important">Lorem ipsum dolor sit amet, </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" style="text-align: left">Unit Kerja</th>
+                        <td>:</td>
+                        <td style="text-align: justify !important">Staff</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
+              </div>
             </div>
-          </section>
-      
+          </div>
+        </div>
+    </div>
+  </section>
 </div>
 @endsection

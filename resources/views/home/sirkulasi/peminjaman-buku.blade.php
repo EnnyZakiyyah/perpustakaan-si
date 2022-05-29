@@ -14,38 +14,36 @@
     
     <!--Search-->
     <section class="pt-5">
-    <div class="row">
-        <div class="col-5">
-            <form>
-                <div class="search rounded-pill"><input type="text" class="form-control rounded-pill" placeholder="Search books, articles, keywords"> <i class="fa fa-search"></i></div>
-            </form>
+      <div class="row">
+        <div class="col-md-auto mt-2">
+          <form>
+            <div class="search rounded-pill"><input type="text" class="form-control rounded-pill" placeholder="Search books, articles, keywords"> <i class="fa fa-search"></i></div>
+          </form>
         </div>
-        <div class="col-2">
-            <form>
-                <div class="search rounded-pill"><input type="text" class="form-control rounded-pill" placeholder="Judul"> <i class="fa fa-search"></i></div>
-            </form>
+        <div class="col col-lg-3 mt-2">
+          <form>
+            <div class="search rounded-pill"><input type="text" class="form-control rounded-pill" placeholder="Judul"> <i class="fa fa-search"></i></div>
+          </form>
         </div>
-        <div class="col-3">
-            <form>
-              <form>
-                <select class="form-select rounded-pill" aria-label="Default select example">
-                  <option selected>Jenis</option>
-                  <option value="1">Booklet</option>
-                  <option value="2">Buku</option>
-                  <option value="3">Laporan Program</option>
-                  <option value="4">Laporan TA</option>
-                  <option value="5">Majalah</option>
-                  <option value="6">Softfile</option>
-                </select>
-            </form>
-            </form>
+        <div class="col-md-auto mt-2">
+          <form>
+            <select class="form-select rounded-pill" aria-label="Default select example">
+              <option selected>Jenis</option>
+              <option value="1">Booklet</option>
+              <option value="2">Buku</option>
+              <option value="3">Laporan Program</option>
+              <option value="4">Laporan TA</option>
+              <option value="5">Majalah</option>
+              <option value="6">Softfile</option>
+            </select>
+          </form>
         </div>
-        <div class="col-2">
-            <form>
-                <button class="btn btn-search " type="submit">Search</button>
-            </form>
+        <div class="col-md-auto mt-2">
+          <form>
+              <button class="btn btn-search " type="submit">Search</button>
+          </form>
         </div>
-    </div>
+      </div>
   </section>
 
 
@@ -58,6 +56,7 @@
         </ul>
         <div class="tab-content" id="myTabContent">
           <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div style="overflow-x:auto;">
             <table class="table table-hover">
               <thead>
                 <tr>
@@ -112,10 +111,10 @@
                 </tr>
               </tbody>
             </table>
-
+          </div>
             <!--PAGINATION-->
             <nav aria-label="Page navigation example">
-              <ul class="pagination justify-content-center">
+              <ul class="pagination justify-content-center mt-5">
                 <li class="page-item">
                   <a class="page-link" href="#" aria-label="Previous">
                     <span aria-hidden="true">&laquo;</span>

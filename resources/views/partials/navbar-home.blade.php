@@ -16,7 +16,7 @@
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle{{ ($title === "Layanan") ? 'active' : '' }}" href="/layanan" href="/sirkulasi id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle {{ ($title === "Layanan") ? 'active' : '' }}" href="/layanan" href="/sirkulasi id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
             Layanan
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">

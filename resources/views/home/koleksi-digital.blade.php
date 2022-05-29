@@ -14,36 +14,36 @@
   
     <!--Search-->
     <section class="pt-5">
-    <div class="row">
-        <div class="col-5">
-            <form>
-                <div class="search rounded-pill"><input type="text" class="form-control rounded-pill" placeholder="Search books, articles, keywords"> <i class="fa fa-search"></i></div>
-            </form>
+      <div class="row">
+        <div class="col-md-auto mt-2">
+          <form>
+            <div class="search rounded-pill"><input type="text" class="form-control rounded-pill" placeholder="Search books, articles, keywords"> <i class="fa fa-search"></i></div>
+          </form>
         </div>
-        <div class="col-2">
-            <form>
-                <div class="search rounded-pill"><input type="text" class="form-control rounded-pill" placeholder="Judul"> <i class="fa fa-search"></i></div>
-            </form>
+        <div class="col col-lg-3 mt-2">
+          <form>
+            <div class="search rounded-pill"><input type="text" class="form-control rounded-pill" placeholder="Judul"> <i class="fa fa-search"></i></div>
+          </form>
         </div>
-        <div class="col-3">
-            <form>
-                <select class="form-select rounded-pill" aria-label="Default select example">
-                  <option selected>Jenis</option>
-                  <option value="1">Booklet</option>
-                  <option value="2">Buku</option>
-                  <option value="3">Laporan Program</option>
-                  <option value="4">Laporan TA</option>
-                  <option value="5">Majalah</option>
-                  <option value="6">Softfile</option>
-                </select>
-            </form>
+        <div class="col-md-auto mt-2">
+          <form>
+            <select class="form-select rounded-pill" aria-label="Default select example">
+              <option selected>Jenis</option>
+              <option value="1">Booklet</option>
+              <option value="2">Buku</option>
+              <option value="3">Laporan Program</option>
+              <option value="4">Laporan TA</option>
+              <option value="5">Majalah</option>
+              <option value="6">Softfile</option>
+            </select>
+          </form>
         </div>
-        <div class="col-2">
-            <form>
-                <button class="btn btn-search " type="submit">Search</button>
-            </form>
+        <div class="col-md-auto mt-2">
+          <form>
+              <button class="btn btn-search " type="submit">Search</button>
+          </form>
         </div>
-    </div>
+      </div>
   </section>
 
 
