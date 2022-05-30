@@ -102,7 +102,45 @@ Route::get('/sign-up', function () {
 
 //Dashboard
 Route::get('/dashboard', function () {
-    return view('dashboard.dashboard', [
+    return view('dashboard.index', [
+        "title" => "Perpustakaan | Dashboard",
+    ]);
+});
+//Dashboard SIRKULASI
+Route::get('/dashboard/sirkulasi/peminjaman-buku', function () {
+    return view('dashboard.sirkulasi.peminjaman-buku.index', [
+        "title" => "Perpustakaan | Dashboard",
+    ]);
+});
+Route::get('/dashboard/sirkulasi/pengembalian-buku', function () {
+    return view('dashboard.sirkulasi.pengembalian-buku.index', [
+        "title" => "Perpustakaan | Dashboard",
+    ]);
+});
+Route::get('/dashboard/sirkulasi/penelusuran-katalog', function () {
+    return view('dashboard.sirkulasi.penelusuran-katalog.index', [
+        "title" => "Perpustakaan | Dashboard",
+    ]);
+});
+Route::get('/dashboard/sirkulasi/bebas-pustaka', function () {
+    return view('dashboard.sirkulasi.bebas-pustaka.index', [
+        "title" => "Perpustakaan | Dashboard",
+    ]);
+});
+//Dashboard LAYANAN
+Route::get('/dashboard/layanan/keanggotaan', function () {
+    return view('dashboard.layanan.keanggotaan.index', [
+        "title" => "Perpustakaan | Dashboard",
+    ]);
+});
+Route::get('/dashboard/layanan/bibliography', function () {
+    return view('dashboard.layanan.bibliography.index', [
+        "title" => "Perpustakaan | Dashboard",
+    ]);
+});
+//Dashboard KOLEKSI DIGITAL
+Route::get('/dashboard/koleksi-digital', function () {
+    return view('dashboard.koleksi-digital.index', [
         "title" => "Perpustakaan | Dashboard",
     ]);
 });
