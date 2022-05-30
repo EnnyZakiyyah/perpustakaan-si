@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
     {
         User::factory(3)->create();
 
-        Katalog::factory(5)->create();
+        Katalog::factory(20)->create();
         
         Category::create([
             'name' => 'Majalah',

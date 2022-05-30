@@ -1,6 +1,8 @@
 @extends('layouts.main')
 
 @section('container')
+ 
+ 
   <div class="container">
     <h1 class="pt-5 mb-2 fs-7 fw-bold"><span style="color: #002147">{{ $title }} </span></h1>
     
@@ -13,41 +15,38 @@
       </ol>
     </nav>
 
-    <!--Search-->
     <section class="pt-5">
+      <form action="/home/sirkulasi/penelusuran-katalog">
       <div class="row">
         <div class="col-md-auto mt-2">
-          <form>
-            <div class="search rounded-pill"><input type="text" class="form-control rounded-pill" placeholder="Search books, articles, keywords"> <i class="fa fa-search"></i></div>
-          </form>
+            <div class="search rounded-pill"><input type="text" class="form-control rounded-pill" placeholder="Search books, articles, keywords" name="search"> <i class="fa fa-search"></i></div>
         </div>
-        <div class="col col-lg-3 mt-2">
-          <form>
-            <div class="search rounded-pill"><input type="text" class="form-control rounded-pill" placeholder="Judul"> <i class="fa fa-search"></i></div>
-          </form>
+        @if (request('category'))
+        <input type="hidden" class="form-control rounded-pill" placeholder="Search books, articles, keywords" name="category" value="{{ request('category') }}">
+        @endif
+        @if (request('author'))
+        <input type="hidden" class="form-control rounded-pill" placeholder="Search books, articles, keywords" name="author" value="{{ request('author') }}">
+        @endif
+        <div class="col-md-auto mt-2">
+          <select class="form-select rounded-pill" aria-label="Default select example" name="">
+            <option selected>Jenis</option>
+            <option value="booklet">Booklet</option>
+            <option value="buku">Buku</option>
+            <option value="laporan program">Laporan Program</option>
+            <option value="laporan ta">Laporan TA</option>
+            <option value="majalah">Majalah</option>
+            <option value="softfile">Softfile</option>
+          </select>
         </div>
         <div class="col-md-auto mt-2">
-          <form>
-            <select class="form-select rounded-pill" aria-label="Default select example">
-              <option selected>Jenis</option>
-              <option value="1">Booklet</option>
-              <option value="2">Buku</option>
-              <option value="3">Laporan Program</option>
-              <option value="4">Laporan TA</option>
-              <option value="5">Majalah</option>
-              <option value="6">Softfile</option>
-            </select>
-          </form>
-        </div>
-        <div class="col-md-auto mt-2">
-          <form>
               <button class="btn btn-search " type="submit">Search</button>
-          </form>
         </div>
       </div>
+    </form>
     </section>
-    
+   
     <!--Penelusuran Katalog-->
+  @if ($katalogs->count()) 
   <section class="pt-2">
         <article>
           <div class="container">
@@ -61,37 +60,32 @@
                 </div>
                   <div class="card-body">
                     <h6 class="pt-5">{{ $katalog->title }}</h6>
-                    <p>by <a href="/authors/{{ $katalog->author->username }}" class="text-primary" style="font-size: 13px;">{{ $katalog->author->name }}</a></p>
+                    <p>by <a href="/home/sirkulasi/penelusuran-katalog?author={{ $katalog->author->username }}" class="text-primary" style="font-size: 13px;">{{ $katalog->author->name }}</a></p>
                     <p style="font-size: 13px;">2016</p>
                     <p>{!! $katalog->excerpt !!}
                     <a href="/home/sirkulasi/penelusuran-katalog/{{ $katalog->slug }}" class="text-primary">Read More...</a></p> 
-                    <a type="button" class="btn btn-outline-secondary btn-sm" style="font-weight: bold;" href="/categories/{{ $katalog->category->slug }}">{{ $katalog->category->name }}</a>
+                    <a type="button" class="btn btn-outline-secondary btn-sm" style="font-weight: bold;" href="/home/sirkulasi/penelusuran-katalog?category={{ $katalog->category->slug }}">{{ $katalog->category->name }}</a>
                   </div>
               </div>
               @endforeach
             </div>
           </div>
         </article>
-
+        @else
+        <p class="text-center fs-4">No Post Found.</p>
+        @endif
             <!--PAGINATION-->
             <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center">
                 <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                  </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
+                  {{ $katalogs->links() }}
                 </li>
               </ul>
             </nav>
           </div>
   </section>
-  </div>
+  </div> 
+    
+  
+ 
 @endsection
