@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\KatalogController;
-use App\Models\Category;
 use App\Models\User;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\KatalogController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -87,18 +89,8 @@ Route::get('/home/koleksi-digital/koleksi-digital/detil', function () {
 // });
 
 //Auth
-Route::get('/sign-in', function () {
-    return view('auth/sign-in', [
-        "title" => "Sign In",
-    ]);
-});
-
-Route::get('/sign-up', function () {
-    return view('auth/sign-up', [
-        "title" => "Sign Up",
-    ]);
-});
-
+Route::get('/sign-in', [LoginController::class, 'index']);
+Route::get('/sign-up', [RegisterController::class, 'index']);
 
 //Dashboard
 Route::get('/dashboard', function () {
