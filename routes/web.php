@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Models\User;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
@@ -89,15 +90,17 @@ Route::get('/home/koleksi-digital/koleksi-digital/detil', function () {
 // });
 
 //Auth
-Route::get('/sign-in', [LoginController::class, 'index']);
-Route::get('/sign-up', [RegisterController::class, 'index']);
+Route::get('/sign-in', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/sign-in', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/sign-up', [RegisterController::class, 'create'])->middleware('guest');
+Route::post('/sign-up', [RegisterController::class, 'store']);
+
 
 //Dashboard
-Route::get('/dashboard', function () {
-    return view('dashboard.index', [
-        "title" => "Perpustakaan | Dashboard",
-    ]);
-});
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+
 //Dashboard SIRKULASI
 Route::get('/dashboard/sirkulasi/peminjaman-buku', function () {
     return view('dashboard.sirkulasi.peminjaman-buku.index', [
