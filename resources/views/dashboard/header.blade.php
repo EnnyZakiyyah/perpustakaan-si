@@ -54,7 +54,7 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">John Doe</span>
+                            <span class="fw-semibold d-block">{{ auth()->user()->name }}</span>
                             <small class="text-muted">Admin</small>
                           </div>
                         </div>
@@ -88,10 +88,13 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="auth-login-basic.html">
-                        <i class="bx bx-power-off me-2"></i>
-                        <span class="align-middle">Log Out</span>
-                      </a>
+                      <form action="/logout" method="POST">
+                        @csrf
+                        <a class="dropdown-item">
+                          <i class="bx bx-power-off me-2"></i>
+                          <button class="align-middle bg-transparent border-0 text-secondary" type="submit">Log Out</button>
+                        </a>
+                      </form>
                     </li>
                   </ul>
                 </li>

@@ -1,8 +1,6 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
-use App\Models\User;
-use App\Models\Category;
+use App\Http\Controllers\DashboardPostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\KatalogController;
@@ -99,24 +97,25 @@ Route::post('/sign-up', [RegisterController::class, 'store']);
 
 
 //Dashboard
-Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/dashboard', function(){
+    return view('dashboard.index', [
+        "title" => "Perpustakaan | Dashboard",
+    ]);
+})->middleware('auth');
 
 //Dashboard SIRKULASI
 Route::get('/dashboard/sirkulasi/peminjaman-buku', function () {
     return view('dashboard.sirkulasi.peminjaman-buku.index', [
-        "title" => "Perpustakaan | Dashboard",
+        "title" => "Dashboard | Peminjaman Buku",
     ]);
 });
 Route::get('/dashboard/sirkulasi/pengembalian-buku', function () {
     return view('dashboard.sirkulasi.pengembalian-buku.index', [
-        "title" => "Perpustakaan | Dashboard",
+        "title" => "Dashboard | Pengembalian Buku",
     ]);
 });
-Route::get('/dashboard/sirkulasi/penelusuran-katalog', function () {
-    return view('dashboard.sirkulasi.penelusuran-katalog.index', [
-        "title" => "Perpustakaan | Dashboard",
-    ]);
-});
+Route::resource('/dashboard/sirkulasi/penelusuran-katalog', DashboardPostController::class)->middleware('auth');
+//Route::resource('/dashboard/sirkulasi/peminjaman-buku', DashboardPostController::class)->middleware('auth');
 Route::get('/dashboard/sirkulasi/bebas-pustaka', function () {
     return view('dashboard.sirkulasi.bebas-pustaka.index', [
         "title" => "Perpustakaan | Dashboard",
@@ -125,17 +124,18 @@ Route::get('/dashboard/sirkulasi/bebas-pustaka', function () {
 //Dashboard LAYANAN
 Route::get('/dashboard/layanan/keanggotaan', function () {
     return view('dashboard.layanan.keanggotaan.index', [
-        "title" => "Perpustakaan | Dashboard",
+        "title" => "Dashboard | Keanggotaan",
     ]);
 });
 Route::get('/dashboard/layanan/bibliography', function () {
     return view('dashboard.layanan.bibliography.index', [
-        "title" => "Perpustakaan | Dashboard",
+        "title" => "Dashboard | Bibliography",
     ]);
 });
 //Dashboard KOLEKSI DIGITAL
-Route::get('/dashboard/koleksi-digital', function () {
-    return view('dashboard.koleksi-digital.index', [
-        "title" => "Perpustakaan | Dashboard",
-    ]);
-});
+// Route::resource('/dashboard/koleksi-digital', DashboardPostController::class)->middleware('auth');
+// Route::get('/dashboard/koleksi-digital', function () {
+//     return view('dashboard.koleksi-digital.index', [
+//         "title" => "Dashboard | Koleksi Digital",
+//     ]);
+// });

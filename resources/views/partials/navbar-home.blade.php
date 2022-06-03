@@ -7,7 +7,7 @@
                 class="navbar-toggler-icon"> </span></button>
         <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link {{ ($title === "LPTP Surakarta") ? 'active' : '' }}"
+                <li class="nav-item"><a class="nav-link {{ Request::is('/') ? 'active' : '' }}"
                         aria-current="page" href="/">Home</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {{ ($title === "Sirkulasi") ? 'active' : '' }}"
@@ -24,7 +24,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {{ ($title === "Layanan") ? 'active' : '' }}" href="/layanan"
-                        href="/sirkulasi id=" navbarDropdown" role="button" data-toggle="dropdown"
+                        href="/sirkulasi" id=" navbarDropdown" role="button" data-toggle="dropdown"
                         aria-expanded="false">
                         Layanan
                     </a>
@@ -33,7 +33,7 @@
                         <a class="dropdown-item" href="/home/layanan/bibliography">Bibliography</a>
                     </div>
                 </li>
-                <li class="nav-item"><a class="nav-link" aria-current="page"
+                <li class="nav-item"><a class="nav-link {{ Request::is('home/koleksi-digital/koleksi-digital') ? 'active' : '' }}" aria-current="page"
                         href="/home/koleksi-digital/koleksi-digital">Koleksi Digital</a></li>
                         @auth
                         
