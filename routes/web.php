@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\DashboardPostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\KatalogController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardPostController;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 /*
 |--------------------------------------------------------------------------
@@ -114,6 +115,7 @@ Route::get('/dashboard/sirkulasi/pengembalian-buku', function () {
         "title" => "Dashboard | Pengembalian Buku",
     ]);
 });
+Route::get('/dashboard/sirkulasi/penelusuran-katalog/checkSlug', DashboardPostController::class, 'checkSlug')->middleware('auth');
 Route::resource('/dashboard/sirkulasi/penelusuran-katalog', DashboardPostController::class)->middleware('auth');
 //Route::resource('/dashboard/sirkulasi/peminjaman-buku', DashboardPostController::class)->middleware('auth');
 Route::get('/dashboard/sirkulasi/bebas-pustaka', function () {

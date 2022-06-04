@@ -1,110 +1,44 @@
 {
-  "name": "sneat-bootstrap-html-admin-template-free",
-  "description": "Most Powerful & Comprehensive Free Bootstrap 5 HTML Admin Dashboard Template built for developers! 🚀",
-  "license": "MIT",
-  "version": "1.0.0",
-  "author": {
-    "name": "ThemeSelection",
-    "url": "https://themeselection.com/"
-  },
-  "bugs": {
-    "url": "https://github.com/themeselection/sneat-html-admin-template-free/issues"
-  },
-  "private": false,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/themeselection/sneat-html-admin-template-free.git"
-  },
-  "homepage": "https://themeselection.com/products/sneat-free-bootstrap-html-admin-template/",
-  "keywords": [
-    "bootstrap",
-    "front-end",
-    "admin",
-    "framework",
-    "admin-dashboard",
-    "webapp",
-    "bootstrap5",
-    "themeselection",
-    "freebies"
-  ],
+  "name": "Able-pro-lite",
+  "version": "8.0.0",
+  "description": "Nextro is a admin template made using Bootstrap 4 framework.",
+  "main": "index.js",
   "scripts": {
-    "build": "npx gulp build",
-    "build:js": "npx gulp build:js",
-    "build:css": "npx gulp build:css",
-    "build:fonts": "npx gulp build:fonts",
-    "build:copy": "npx gulp build:copy",
-    "build:prod": "npx gulp build --env=production",
-    "build:prod:js": "npx gulp build:js --env=production",
-    "build:prod:css": "npx gulp build:css --env=production",
-    "build:prod:fonts": "npx gulp build:fonts --env=production",
-    "build:prod:copy": "npx gulp build:copy --env=production",
-    "watch": "npx gulp watch",
-    "serve": "npx gulp serve"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Phoenixcoded",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssbeautify": "^1.0.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-inject": "^5.0.2",
+    "gulp-minify": "^3.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sequence": "^1.0.0",
+    "gulp-smushit": "^1.2.0",
+    "gulp-uglify": "^3.0.1",
+    "merge-stream": "^1.0.1"
   },
   "dependencies": {
-    "@popperjs/core": "^2.9.2",
-    "apexcharts-clevision": "^3.28.3",
-    "bootstrap": "~5.1.3",
-    "boxicons": "~2.0.9",
-    "highlight.js": "~9.17.1",
-    "jquery": "~3.5.1",
-    "masonry-layout": "~4.2.1",
-    "perfect-scrollbar": "~1.5.1"
-  },
-  "devDependencies": {
-    "@babel/core": "~7.7.7",
-    "@babel/plugin-proposal-object-rest-spread": "~7.7.7",
-    "@babel/plugin-transform-destructuring": "~7.7.4",
-    "@babel/plugin-transform-template-literals": "~7.7.4",
-    "@babel/preset-env": "~7.7.7",
-    "ansi-colors": "~4.1.1",
-    "babel-loader": "~8.0.4",
-    "browser-sync": "^2.26.7",
-    "color-support": "~1.1.3",
-    "css-loader": "~3.4.0",
-    "deepmerge": "~4.2.2",
-    "del": "~5.1.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "fancy-log": "~1.3.3",
-    "gulp": "~4.0.2",
-    "gulp-autoprefixer": "~7.0.1",
-    "gulp-environment": "~1.5.2",
-    "gulp-if": "~3.0.0",
-    "gulp-rename": "~2.0.0",
-    "gulp-replace": "~1.0.0",
-    "gulp-sourcemaps": "~2.6.4",
-    "gulp-useref": "^5.0.0",
-    "gulp-dart-sass": "^1.0.2",
-    "gulp-exec": "^5.0.0",
-    "html-loader": "~0.5.5",
-    "js-beautify": "^1.10.3",
-    "prettier": "^2.2.1",
-    "sass-loader": "~8.0.0",
-    "string-replace-webpack-plugin": "~0.1.3",
-    "style-loader": "~1.1.2",
-    "uglifyjs-webpack-plugin": "~2.2.0",
-    "webpack": "~4.41.0",
-    "yarn": "~1.21.1"
-  },
-  "gulp-environment": {
-    "environments": [
-      {
-        "name": "development",
-        "aliases": [
-          "dev"
-        ]
-      },
-      {
-        "name": "production",
-        "aliases": [
-          "prod"
-        ]
-      }
-    ],
-    "default": "development"
+    "animate.css": "^3.7.0",
+    "apexcharts": "^3.6.9",
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.3",
+    "clipboard": "^2.0.4",
+    "components-jqueryui": "^1.12.1",
+    "gmaps": "^0.4.24",
+    "gulp-file-include": "^2.0.1",
+    "jquery": "^3.4.0",
+    "lodash": "^4.17.11",
+    "perfect-scrollbar": "^1.4.0",
+    "prismjs": "^1.16.0"
   }
 }

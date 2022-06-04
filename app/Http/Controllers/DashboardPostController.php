@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Katalog;
 use Illuminate\Http\Request;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class DashboardPostController extends Controller
 {
@@ -35,7 +37,10 @@ class DashboardPostController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.sirkulasi.penelusuran-katalog.create', [
+            'categories' => Category::all()
+        ]);
+        dd('categories');
     }
 
     /**
@@ -57,7 +62,14 @@ class DashboardPostController extends Controller
      */
     public function show(Katalog $katalog)
     {
-        return $katalog;
+        // $katalog = Katalog::all();
+        return view('dashboard.sirkulasi.penelusuran-katalog.show', [
+            'katalogs' => Katalog::all()
+        ]);
+        // dd ($katalog);
+
+        // $katalog = Katalog::all();
+        // return view('dashboard.sirkulasi.penelusuran-katalog.show', compact('katalog'));
     }
 
     /**
@@ -92,5 +104,13 @@ class DashboardPostController extends Controller
     public function destroy(Katalog $katalog)
     {
         //
+    }
+
+    public function checkSlug(Request $request){
+        $slug = SlugService::createSlug(Katalog::class, 'slug', $request->title);
+        return response()->json(['slug' => $slug]);
+        // dd($slug);
+
+        
     }
 }

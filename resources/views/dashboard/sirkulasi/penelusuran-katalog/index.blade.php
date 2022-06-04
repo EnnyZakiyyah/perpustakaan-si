@@ -1,45 +1,48 @@
 @extends('dashboard.layouts.main')
 @section('container')
-
-<!-- Content -->
-<div class="container-xxl flex-grow-1 container-p-y">
-    <!-- Responsive Table -->
+ <!-- [ Hover-table ] start -->
     <div class="card">
-        <h5 class="card-header">Penelusuran katalog</h5>
-        <div class="table-responsive text-nowrap">
-            <table class="table">
-                <thead>
-                    <tr class="text-nowrap">
-                        <th>No</th>
-                        <th>Judul</th>
-                        <th>Penulis</th>
-                        <th>ISBN</th>
-                        <th>Tahun Terbit</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($katalogs as $katalog)
-                    <tr>
-                        <th scope="row">{{ $loop->iteration }}</th>
-                        <td>{{ $katalog->title }}</td>
-                        <td>{{ $katalog->author->name }}</td>
-                        <td>ISBN</td>
-                        <td>2016</td>
-                        <td>
-                            <a href="/dashboard/sirkulasi/penelusuran-katalog/{{ $katalog->slug }}"
-                                class="badge bg-info"><i class="bx bx-show"></i></a>
-                            <a href="" class="badge bg-warning"><i class="bx bx-message-square-edit"></i></a>
-                            <a href="" class="badge bg-danger"><i class="bx bx-x-circle"></i></a>
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
+        <div class="card-header">
+            <h5>Penelusuran Katalog</h5>
         </div>
-    </div>
-    <!--/ Responsive Table -->
-</div>
-<!-- / Content -->
+        <div class="col-md-4 px-3 py-3">
+            <a href="/dashboard/sirkulasi/penelusuran-katalog/create" class="btn btn-primary me-2 px-3">Tambah Data</a>
+        </div>
+        <div class="card-body table-border-style">
+            <div class="table-responsive text-nowrap">
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="text-nowrap">
+                            <th>No</th>
+                            <th>Judul</th>
+                            <th>Penulis</th>
+                            <th>ISBN</th>
+                            <th>Tahun Terbit</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($katalogs as $katalog)
+                        <tr>
+                            <th scope="row">{{ $loop->iteration }}</th>
+                            <td>{{ $katalog->title }}</td>
+                            <td>{{ $katalog->author->name }}</td>
+                            <td>{{ $katalog->isbn }}</td>
+                            <td>{{ $katalog->tahun_terbit }}</td>
+                            <td>
+                                <a href="/dashboard/sirkulasi/penelusuran-katalog/{{ $katalog->slug }}"
+                                    class="badge bg-info"><i class="feather icon-eye" style="color: white"></i></a>
+                                <a href="" class="badge bg-warning"><i class="feather icon-edit" style="color: white"></i></a>
+                                <a href="" class="badge bg-danger"><i class="feather icon-x-circle" style="color: white"></i></a>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>  
+<!-- [ Hover-table ] end -->
+
 
 @endsection

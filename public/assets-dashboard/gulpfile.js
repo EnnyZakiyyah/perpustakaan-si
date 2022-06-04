@@ -1,98 +1,193 @@
-const path = require('path');
+var gulp = require('gulp'), // main
+    sass = require('gulp-sass'), // scss compiler
+    concat = require('gulp-concat'), // merge two files
+    uglify = require('gulp-uglify'), // minify js files
+    rename = require('gulp-rename'), // rename files
+    cssmin = require('gulp-cssmin'), // minify css files
+    merge = require('merge-stream'), // mearge two task
+    gulpsequence = require('gulp-sequence'), //  execute multiple task
+    babel = require("gulp-babel"), // convert next generation JavaScript, today.
+    npmlodash = require("lodash"), // perfoming oops in gulp
+    smushit = require('gulp-smushit'), // image optimizer
+    autoprefixer = require('gulp-autoprefixer'), // css propertys autoprefixer
+    cssbeautify = require('gulp-cssbeautify'), // css cssbeautify
+    fileinclude = require('gulp-file-include'), // include html files
+    browsersync = require("browser-sync"), // browser reload
+    htmlmin = require('gulp-htmlmin'); // html minify
 
-// Config
-// -------------------------------------------------------------------------------
 
-const env = require('gulp-environment');
-process.env.NODE_ENV = env.current.name;
-
-let serverPath;
-const conf = (() => {
-  const _conf = require('./build-config');
-  serverPath = _conf.base.serverPath;
-  templatePath = _conf.base.buildTemplatePath;
-  buildPath = _conf.base.buildPath;
-  return require('deepmerge').all([{}, _conf.base || {}, _conf[process.env.NODE_ENV] || {}]);
-})();
-
-conf.distPath = path.resolve(__dirname, conf.distPath).replace(/\\/g, '/');
-
-// Modules
-// -------------------------------------------------------------------------------
-
-const { parallel, series, watch } = require('gulp');
-const del = require('del');
-const colors = require('ansi-colors');
-const browserSync = require('browser-sync').create();
-colors.enabled = require('color-support').hasBasic;
-
-// Utilities
-// -------------------------------------------------------------------------------
-
-function srcGlob(...src) {
-  return src.concat(conf.exclude.map(d => `!${d}/**/*`));
+const layout = {
+    'layouts': 'vertical', // vertical / horizontal
+    'sublayouts': '',
+    'darktheme': 'false', // true / false
+    'rtltheme': 'false', // true / false
+    'bodyclass': '',
+    'menuclass': 'menu-light',
+    'headerclass': 'header-blue',
 }
 
-// Tasks
-// -------------------------------------------------------------------------------
 
-const buildTasks = require('./tasks/build')(conf, srcGlob);
-const prodTasks = require('./tasks/prod')(conf);
 
-// Clean build directory
-// -------------------------------------------------------------------------------
+//  [ scss compiler ] start
+gulp.task('sass', function() {
+    // main style css
+    return gulp.src('src/assets/scss/*.scss')
+        .pipe(sass())
+        .pipe(autoprefixer())
+        .pipe(cssbeautify())
+        .pipe(gulp.dest('dist/assets/css'))
+})
+//  [ scss compiler ] end
 
-const cleanTask = function () {
-  return del([conf.distPath, buildPath], {
-    force: true
-  });
-};
+//  [ Copy assets ] start
+gulp.task('build', function() {
+    var required_libs = {
+        js: [
+            "node_modules/bootstrap/dist/js/bootstrap.min.js",
+            "node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js",
+            "node_modules/prismjs/prism.js",
+            "node_modules/apexcharts/dist/apexcharts.min.js",
+            "node_modules/gmaps/gmaps.min.js",
+            "node_modules/components-jqueryui/jquery-ui.min.js",
+ 
+        ],
+        css: [
+            "node_modules/bootstrap/dist/css/bootstrap.min.css",
+            "node_modules/animate.css/animate.min.css",
+            "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
+            "node_modules/prismjs/themes/prism-coy.css",
+        ]
+    };
+    npmlodash(required_libs).forEach(function(assets, type) {
+        if (type == "css") {
+            gulp.src(assets)
+                .pipe(gulp.dest("dist/assets/css/plugins"));
+        } else {
+            gulp.src(assets)
+                .pipe(gulp.dest("dist/assets/js/plugins"));
+        }
+    });
+    var cpyassets = gulp.src(['src/assets/**/*.*', '!src/assets/scss/**/*.*'])
+        .pipe(gulp.dest('dist/assets'));
+    return merge(cpyassets);
+});
 
-// Watch
-// -------------------------------------------------------------------------------
-const watchTask = function () {
-  watch(srcGlob('**/*.scss', '!fonts/**/*.scss'), buildTasks.css);
-  watch(srcGlob('fonts/**/*.scss'), parallel(buildTasks.css, buildTasks.fonts));
-  watch(srcGlob('**/*.@(js|es6)', '!*.js'), buildTasks.js);
-  // watch(srcGlob('**/*.png', '**/*.gif', '**/*.jpg', '**/*.jpeg', '**/*.svg', '**/*.swf'), copyTasks.copyAssets)
-};
+//  [ Copy assets ] end
 
-// Serve
-// -------------------------------------------------------------------------------
-const serveTasks = function () {
-  browserSync.init({
-    // ? You can change server path variable from build-config.js file
-    server: serverPath
-  });
-  watch([
-    // ? You can change add/remove files/folders watch paths in below array
-    'html/**/*.html',
-    'html-starter/**/*.html',
-    'assets/vendor/css/*.css',
-    'assets/vendor/css/rtl/*.css',
-    'assets/css/*.css',
-    'assets/js/*.js'
-  ]).on('change', browserSync.reload);
-};
+//  [ build html ] start
+gulp.task('build-html', function() {
+    return gulp.src('src/html/*.html')
+        .pipe(fileinclude({
+            context: layout,
+            prefix: '@@',
+            basepath: '@file',
+            indent: true
+        }))
+        .pipe(gulp.dest('dist'))
+})
+//  [ build html ] end
 
-const serveTask = parallel([serveTasks, watchTask]);
+//  [ build js ] start
+gulp.task('build-js', function() {
+    var layoutjs = gulp.src('src/assets/js/*.js')
+        .pipe(gulp.dest('dist/assets/js'))
 
-// Build (Dev & Prod)
-// -------------------------------------------------------------------------------
+    var pagesjs = gulp.src('src/assets/js/pages/*.js')
+        .pipe(gulp.dest('dist/assets/js/pages'))
 
-const buildTask = conf.cleanDist
-  ? series(cleanTask, env.current.name === 'production' ? [buildTasks.all, prodTasks.all] : buildTasks.all)
-  : series(env.current.name === 'production' ? [buildTasks.all, prodTasks.all] : buildTasks.all);
+    return merge(layoutjs, pagesjs);
+})
+//  [ build js ] end
 
-// Exports
-// -------------------------------------------------------------------------------
-module.exports = {
-  default: buildTask,
-  build: buildTask,
-  'build:js': buildTasks.js,
-  'build:css': buildTasks.css,
-  'build:fonts': buildTasks.fonts,
-  'build:copy': parallel([buildTasks.copy]),
-  watch: watchTask,
-  serve: serveTask
-};
+//  [ scss compiler ] start
+gulp.task('mincss', function() {
+    // main style css
+    return gulp.src('src/assets/scss/*.scss')
+        .pipe(sass())
+        .pipe(autoprefixer())
+        .pipe(cssbeautify())
+        .pipe(gulp.dest('dist/assets/css'))
+        .pipe(cssmin())
+        .pipe(gulp.dest('dist/assets/css'))
+})
+//  [ scss compiler ] end
+
+//  [ uglify js ] start
+gulp.task('uglify', function() {
+    var layoutjs = gulp.src('src/assets/js/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/assets/js'))
+
+    var pagesjs = gulp.src('src/assets/js/pages/*.js')
+        .pipe(babel())
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/assets/js/pages'))
+
+    return merge(layoutjs, pagesjs);
+})
+//  [ uglify js ] end
+
+//  [ minify html ] start
+gulp.task('htmlmin', function() {
+    return gulp.src('src/html/*.html')
+        .pipe(fileinclude({
+            context: layout,
+            prefix: '@@',
+            basepath: '@file',
+            indent: true
+        }))
+        .pipe(htmlmin({
+            collapseWhitespace: true
+        }))
+        .pipe(gulp.dest('dist'))
+})
+//  [ minify html ] end
+
+//  [ image optimizer ] start
+gulp.task('imgmin', function() {
+    return gulp.src('src/assets/img/**/*.{jpg,png}')
+        .pipe(smushit())
+        .pipe(gulp.dest('dist/assets/img'));
+});
+//  [ image optimizer ] end
+
+//  [ browser reload ] start
+gulp.task("browserSync", function() {
+    browsersync.init({
+        server: "dist/"
+    });
+});
+//  [ browser reload ] end
+
+//  [ watch ] start
+gulp.task('watch', function() {
+    gulp.watch('src/assets/scss/**/*.scss', gulp.series('sass')).on('change', browsersync.reload);
+    gulp.watch('src/assets/js/**/*.js', gulp.series('build-js')).on('change', browsersync.reload);
+    gulp.watch('src/html/**/*.html', gulp.series('build-html')).on('change', browsersync.reload);
+    gulp.watch('src/doc/**/*.html', gulp.series('build')).on('change', browsersync.reload);
+})
+//  [ watch ] start
+const compile = gulp.parallel('browserSync', 'watch');
+//  [ Default task ] start
+gulp.task('default',
+
+    gulp.series(
+        'build',
+        'sass',
+        'build-js',
+        'build-html',
+        'imgmin',
+        compile
+    )
+);
+// gulp.parallel('browserSync','watch')
+//  [ Default task ] end
+
+//  [ watch minify ] start
+gulp.task('watch-minify', function() {
+    gulp.watch('src/assets/scss/**/*.scss', gulp.series('mincss'));
+    gulp.watch('src/assets/js/**/*.js', gulp.series('uglify'));
+    gulp.watch('src/html/**/*.html', gulp.series('htmlmin'));
+    gulp.watch('src/doc/**/*.html', gulp.series('build'));
+})
+//  [ watch minify ] start

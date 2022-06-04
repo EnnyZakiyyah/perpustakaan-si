@@ -18,6 +18,14 @@ class CreateKatalogsTable extends Migration
             $table->foreignId('category_id');
             $table->foreignId('user_id');
             $table->string('title');
+            $table->string('edisi');
+            $table->string('isbn');
+            $table->string('penerbit');
+            $table->string('tahun_terbit');
+            $table->string('tempat_terbit');
+            $table->string('jumlah');
+            $table->string('bahasa');
+            $table->string('lokasi');
             $table->string('slug')->unique();
             $table->text('excerpt');
             $table->text('body');
