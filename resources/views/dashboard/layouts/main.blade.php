@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Ablepro v8.0 bootstrap admin template by Phoenixcoded</title>
+    <title>LPTP Surakarta | Dashboard</title>
     <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 11]>
@@ -17,12 +17,20 @@
     <meta name="keywords" content="">
     <meta name="author" content="Phoenixcoded" />
     <!-- Favicon icon -->
-    <link rel="icon" href="assets-dashboard/dist/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ asset('assets-dashboard/dist/assets/images/logo/logo-lptp.png') }}" type="image/x-icon">
 
     <!-- vendor css -->
     <link rel="stylesheet" href="{{ asset('assets-dashboard/dist/assets/css/style.css') }}">
 
-
+    <!--Trix Editor-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets-dashboard/dist/assets/css/trix.css') }}">
+    <script type="text/javascript" src="{{ asset('assets-dashboard/dist/assets/js/trix.js') }}"></script>
+    
+    <style>
+        trix-toolbar [data-trix-button-group="file-tools"] {
+            display: none;
+        }    
+    </style>  
 
 </head>
 

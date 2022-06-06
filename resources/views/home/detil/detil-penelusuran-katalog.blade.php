@@ -21,7 +21,7 @@
                 <div class="row">
                   <div class="col-md-4">
                     <div class="card-image">
-                      <a href="#"> <img class="img" src="{{ asset('assets/img/design.png') }}">
+                      <a href="#"> <img class="img" src="{{ asset('assets/img/sirkulasi/Harry-Potter.jpg') }}">
                         <div class="card-caption px-2 py-1"><a href="/home/sirkulasi/penelusuran-katalog?category={{ $katalog->category->slug }}" class="text-white text-decoration-none"> {{ $katalog->category->name }} </a></div>
                       </a>
                   </div>
@@ -43,42 +43,42 @@
                           <tr>
                             <th scope="row" style="text-align: left">Edisi</th>
                             <td>:</td>
-                            <td style="text-align: justify !important"><a href="/authors/{{ $katalog->author->username }}">{{ $katalog->author->name }}</a></td>
+                            <td style="text-align: justify !important">{{ $katalog->edisi }}</td>
                           </tr>
                           <tr>
                             <th scope="row" style="text-align: left">ISBN</th>
                             <td>:</td>
-                            <td style="text-align: justify !important"><a href="/authors/{{ $katalog->author->username }}">{{ $katalog->author->name }}</a></td>
+                            <td style="text-align: justify !important">{{ $katalog->isbn}}</a></td>
                           </tr>
                           <tr>
                             <th scope="row" style="text-align: left">Penerbit</th>
                             <td>:</td>
-                            <td style="text-align: justify !important">Lorem ipsum dolor sit amet</td>
+                            <td style="text-align: justify !important">{{ $katalog->penerbit }}</td>
                           </tr>
                           <tr>
                             <th scope="row" style="text-align: left">Tahun Terbit</th>
                             <td >:</td>
-                            <td style="text-align: justify !important">Lorem ipsum dolor sit amet, </td>
+                            <td style="text-align: justify !important">{{ $katalog->tahun_terbit }}</td>
                           </tr>
                           <tr>
                             <th scope="row" style="text-align: left">Tempat Terbit</th>
                             <td >:</td>
-                            <td style="text-align: justify !important">Lorem ipsum dolor sit amet, </td>
+                            <td style="text-align: justify !important">{{ $katalog->tempat_terbit }}</td>
                           </tr>
                           <tr>
                             <th scope="row" style="text-align: left">Jumlah</th>
                             <td>:</td>
-                            <td style="text-align: justify !important"><a href="/authors/{{ $katalog->author->username }}">{{ $katalog->author->name }}</a> in <a href="/categories/{{ $katalog->category->slug }}">{{ $katalog->category->name }}</a></td>
+                            <td style="text-align: justify !important">{{ $katalog->jumlah }}</td>
                           </tr>
                           <tr>
                             <th scope="row" style="text-align: left">Bahasa</th>
                             <td>:</td>
-                            <td style="text-align: justify !important"><a href="/authors/{{ $katalog->author->username }}">{{ $katalog->author->name }}</a> in <a href="/categories/{{ $katalog->category->slug }}">{{ $katalog->category->name }}</a></td>
+                            <td style="text-align: justify !important">{{ $katalog->bahasa }}</td>
                           </tr>
                           <tr>
                             <th scope="row" style="text-align: left">Lokasi Buku</th>
                             <td>:</td>
-                            <td style="text-align: justify !important"><a href="/authors/{{ $katalog->author->username }}">{{ $katalog->author->name }}</a> in <a href="/categories/{{ $katalog->category->slug }}">{{ $katalog->category->name }}</a></td>
+                            <td style="text-align: justify !important">{{ $katalog->lokasi }}</td>
                           </tr>
                           <tr>
                             <th scope="row" style="text-align: left">Sinopsis</th>

@@ -9,8 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Katalog extends Model 
 {
-    use HasFactory;
-    use Sluggable;
+    use HasFactory, Sluggable;
 
     // protected $fillable = [
     //     'title', 

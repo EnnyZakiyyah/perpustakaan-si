@@ -5,6 +5,13 @@
         <div class="card-header">
             <h5>Penelusuran Katalog</h5>
         </div>
+
+        @if (session()->has('success'))
+            <div class="alert alert-success" role="alert">
+                {{ session('success') }}
+            </div>
+        @endif
+
         <div class="col-md-4 px-3 py-3">
             <a href="/dashboard/sirkulasi/penelusuran-katalog/create" class="btn btn-primary me-2 px-3">Tambah Data</a>
         </div>

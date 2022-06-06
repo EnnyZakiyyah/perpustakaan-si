@@ -135,8 +135,8 @@
 					    <a href="/dashboard" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
-					    <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Sirkulasi</span></a>
-					    <ul class="pcoded-submenu {{ Request::is('/dashboard/sirkulasi/*') ? 'active' : '' }}">
+					    <a href="#!" class="nav-link {{ Request::is('dashboard/sirkulasi*') ? 'active' : '' }}"><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Sirkulasi</span></a>
+					    <ul class="pcoded-submenu">
 					        <li><a href="/dashboard/sirkulasi/peminjaman-buku" target="_blank">Peminjaman Buku</a></li>
 					        <li><a href="/dashboard/sirkulasi/pengembalian-buku" target="_blank">Pengembalian Buku</a></li>
                   <li><a href="/dashboard/sirkulasi/penelusuran-katalog" target="_blank">Penelusuran Katalog</a></li>
@@ -145,7 +145,7 @@
 					</li>
           <li class="nav-item pcoded-hasmenu">
             <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Layanan</span></a>
-            <ul class="pcoded-submenu {{ Request::is('/dashboard/layanan/*') ? 'active' : '' }}">
+            <ul class="pcoded-submenu {{ Request::is('/dashboard/layanan*/') ? 'active' : '' }}">
                 <li><a href="/dashboard/layanan/keanggotaan" target="_blank">Keanggotaan</a></li>
                 <li><a href="/dashboard/layanan/bibliography" target="_blank">Bibliography</a></li>
             </ul>

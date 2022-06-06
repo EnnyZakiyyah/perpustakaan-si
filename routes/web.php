@@ -115,7 +115,7 @@ Route::get('/dashboard/sirkulasi/pengembalian-buku', function () {
         "title" => "Dashboard | Pengembalian Buku",
     ]);
 });
-Route::get('/dashboard/sirkulasi/penelusuran-katalog/checkSlug', DashboardPostController::class, 'checkSlug')->middleware('auth');
+Route::get('/dashboard/sirkulasi/penelusuran-katalog/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/sirkulasi/penelusuran-katalog', DashboardPostController::class)->middleware('auth');
 //Route::resource('/dashboard/sirkulasi/peminjaman-buku', DashboardPostController::class)->middleware('auth');
 Route::get('/dashboard/sirkulasi/bebas-pustaka', function () {

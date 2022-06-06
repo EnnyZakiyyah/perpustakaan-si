@@ -1,9 +1,11 @@
 @extends('dashboard.layouts.main')
 @section('container')
 <!-- Content -->
-@foreach ($katalogs as $katalog)
 
+@foreach ($katalogs as $katalog)
+    
 @endforeach
+
 <!-- [ Hover-table ] start -->
 <div class="card">
     <div class="row g-0">
@@ -81,7 +83,7 @@
                     </tbody>
                 </table>
                 <div class="py-3">
-                    <a href="/dashboard/sirkulasi/penelusuran-katalog" class="btn btn-info"><i class="feather icon-eye" style="color: white"></i>Back</a>
+                    <a href="/dashboard/sirkulasi/penelusuran-katalog" class="btn btn-info"><i class="feather icon-arrow-left" style="color: white"></i>Back</a>
                     <a href="" class="btn btn-warning"><i class="feather icon-edit" style="color: white"></i></i>Edit</a>
                     <a href="" class="btn btn-danger"><i class="feather icon-trash" style="color: white"></i>Delete</a>
                 </div>

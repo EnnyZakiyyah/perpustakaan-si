@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
 use App\Models\Katalog;
+use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Cviebrock\EloquentSluggable\Services\SlugService;
 
@@ -16,18 +17,9 @@ class DashboardPostController extends Controller
      */
     public function index()
     {
-        // $katalogs = Katalog::where('user_id', auth()->user()->id)->get();
-        // $try = Katalog::where('user_id', auth()->user()->id)->get();
-
-        // return view('dashboard.koleksi-digital.index', [
-        //     'katalogs' => Katalog::where('user_id', auth()->user()->id)->get()
-        // ]);
         return view('dashboard.sirkulasi.penelusuran-katalog.index', [
             'katalogs' => Katalog::where('user_id', auth()->user()->id)->get()
         ]);
-
-
-        // dd($katalogs);
     }
 
     /**
@@ -51,7 +43,27 @@ class DashboardPostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validateData = $request->validate([
+            'title' => 'required|max:255',
+            'slug' => 'unique:katalogs',
+            'category_id' => 'required',
+            'body' => 'required',
+            'penulis' => 'required|max:255',
+            'edisi' => '',
+            'isbn' => '',
+            'penerbit' => '',
+            'tahun_terbit' => '',
+            'tempat_terbit' => '',
+            'jumlah' => 'required',
+            'bahasa' => '',
+            'lokasi' => '',
+        ]);
+
+        $validateData['user_id'] = auth()->user()->id;
+        $validateData['excerpt'] = Str::limit(strip_tags($request->body), 200);
+
+        Katalog::create($validateData);
+        return redirect('/dashboard/sirkulasi/penelusuran-katalog')->with('success', 'New Katalog has been addedd!');
     }
 
     /**
@@ -106,11 +118,12 @@ class DashboardPostController extends Controller
         //
     }
 
-    public function checkSlug(Request $request){
+    public function checkSlug(Request $request)
+    {
         $slug = SlugService::createSlug(Katalog::class, 'slug', $request->title);
         return response()->json(['slug' => $slug]);
         // dd($slug);
 
-        
+
     }
 }
