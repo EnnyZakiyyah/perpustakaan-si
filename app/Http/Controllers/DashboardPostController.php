@@ -18,8 +18,11 @@ class DashboardPostController extends Controller
     public function index()
     {
         return view('dashboard.sirkulasi.penelusuran-katalog.index', [
-            'katalogs' => Katalog::where('user_id', auth()->user()->id)->get()
+            'katalogs' => Katalog::all()
         ]);
+        // return view('dashboard.sirkulasi.penelusuran-katalog.index', [
+        //     'katalogs' => Katalog::where('user_id', auth()->user()->id)->get()
+        // ]);
     }
 
     /**
@@ -32,7 +35,7 @@ class DashboardPostController extends Controller
         return view('dashboard.sirkulasi.penelusuran-katalog.create', [
             'categories' => Category::all()
         ]);
-        dd('categories');
+        //dd('categories');
     }
 
     /**
@@ -59,7 +62,7 @@ class DashboardPostController extends Controller
             'lokasi' => '',
         ]);
 
-        $validateData['user_id'] = auth()->user()->id;
+        $validateData['author_id'] = auth()->user()->id;
         $validateData['excerpt'] = Str::limit(strip_tags($request->body), 200);
 
         Katalog::create($validateData);
@@ -90,9 +93,15 @@ class DashboardPostController extends Controller
      * @param  \App\Models\Katalog  $katalog
      * @return \Illuminate\Http\Response
      */
-    public function edit(Katalog $katalog)
+    public function edit(Katalog $katalog, $id)
     {
-        //
+        $katalog_value = Katalog::find($id);
+        return view('dashboard.sirkulasi.penelusuran-katalog.edit', [
+            'katalog' => $katalog,
+            'categories' => Category::all(),
+            'katalog_value' => $katalog_value
+        ]);
+        // dd('$id');
     }
 
     /**
@@ -104,7 +113,34 @@ class DashboardPostController extends Controller
      */
     public function update(Request $request, Katalog $katalog)
     {
-        //
+        $rules = [
+            'title' => 'required|max:255',
+            'category_id' => 'required',
+            'body' => 'required',
+            'penulis' => 'required|max:255',
+            'edisi' => '',
+            'isbn' => '',
+            'penerbit' => '',
+            'tahun_terbit' => '',
+            'tempat_terbit' => '',
+            'jumlah' => 'required',
+            'bahasa' => '',
+            'lokasi' => '',
+        ];
+
+        if($request->slug != $katalog->slug) {
+            $rules['slug'] = 'unique:katalogs';
+        }
+
+        $validateData = $request->validate($rules);
+
+        $validateData['author_id'] = auth()->user()->id;
+        $validateData['excerpt'] = Str::limit(strip_tags($request->body), 200);
+
+        Katalog::where('id', $katalog->id)
+            ->update($validateData);
+        return redirect('/dashboard/sirkulasi/penelusuran-katalog')->with('success', 'Katalog has been updated!');
+
     }
 
     /**
@@ -113,9 +149,11 @@ class DashboardPostController extends Controller
      * @param  \App\Models\Katalog  $katalog
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Katalog $katalog)
+    public function destroy($id)
     {
-        //
+        // Katalog::destroy($katalog->id);
+        Katalog::findOrfail($id)->delete();
+        return redirect('/dashboard/sirkulasi/penelusuran-katalog')->with('success', 'Katalog has been deleted!');
     }
 
     public function checkSlug(Request $request)
